@@ -1,0 +1,21 @@
+seo:
+  site_name: "Raquel Teaches Languages"
+  title: "Raquel Teaches Languages – Interactive Language Lessons in Lisbon & Online"
+  description: "Personalized and engaging Portuguese, English & French lessons for all levels—especially beginners. In‑person in Lisbon or online. Ideal for expats, exam prep & professionals."
+  keywords: 
+    - "language lessons Lisbon"
+    - "Portuguese tutor in Lisbon"
+    - "English lessons beginners Lisbon"
+    - "French classes online"
+    - "expat language support Lisbon"
+    - "exam prep language tutor"
+  social_image: "raquel-teaches-languages-social-banner.jpg"
+  author: "Raquel Karolyi Machado"
+  favicon_image: "favicon-raquel-teaches.png"
+_comments:
+  title: "Used for SEO meta & page title"
+  social_image: "Banner image for social shares (1200×630px recommended)"
+social:
+  instagram_username: "raquelteaches"
+  facebook_url: "https://www.facebook.com/raquelteacheslanguages"
+  twitter_username: 
