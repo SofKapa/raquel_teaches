@@ -1,5 +1,130 @@
+/* ======================================================================================================================================
+   RESETS + BASICS
+====================================================================================================================================== */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+h1, h2, h3 { color: #222; margin-bottom: 0.5em; }
+p { margin-bottom: 1em; }
+a { color: #008cba; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+
+/* ======================================================================================================================================
+   BUTTONS
+====================================================================================================================================== */
+
+.btn-primary {
+  display: inline-block;
+  background: #008cba;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #007aa3; }
+
+
+
+/* ======================================================================================================================================
+   HERO BANNER
+====================================================================================================================================== */
+
+.hero {
+  background: url('/assets/images/hero-lisbon.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6em 1em;
+}
+.hero-content { max-width: 600px; margin: 0 auto; }
+.hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+.hero p { font-size: 1.2em; }
+
+
+
+/* ======================================================================================================================================
+   SECTIONS
+====================================================================================================================================== */
+
+section { padding: 4em 1em; max-width: 900px; margin: 0 auto; }
+.services .service-cards {
+  display: flex; flex-wrap: wrap; gap: 1em;
+}
+.services .card {
+  flex: 1 1 calc(33% - 1em);
+  border: 1px solid #ddd; border-radius: 6px;
+  padding: 1em;
+}
+.locations { margin-top: 1em; font-style: italic; }
+
+
+
+/* ======================================================================================================================================
+   ABOUT
+====================================================================================================================================== */
+
+.about { background: #f9f9f9; text-align: center; }
+
+
+
+/* ======================================================================================================================================
+   TESTIMONIALS
+====================================================================================================================================== */
+
+.testimonials .testimonial-cards {
+  display: flex; flex-direction: column; gap: 1.5em;
+}
+.testimonial { background: #fff; border-left: 4px solid #008cba; padding: 1em; }
+.author { font-weight: bold; margin-top: 0.5em; text-align: right; }
+
+
+
+/* ======================================================================================================================================
+   CONTACT FORM
+====================================================================================================================================== */
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%; padding: 0.75em; border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form label { font-weight: bold; }
+
+
+/* ======================================================================================================================================
+   FOOTER
+====================================================================================================================================== */
+
+footer {
+  text-align: center; padding: 2em 1em; background: #f1f1f1;
+  font-size: 0.9em;
+}
+
+
+
+
+
+
+/* ======================================================================================================================================
+   RESPONSIVENESS
+====================================================================================================================================== */
+
+@media (min-width: 768px) {
+  .testimonials .testimonial-cards { flex-direction: row; }
+  .testimonial { flex: 1; }
+  .contact-form { grid-template-columns: 1fr 1fr; }
+  .contact-form textarea { grid-column: span 2; }
 }
