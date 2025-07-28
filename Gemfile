@@ -11,3 +11,6 @@ gem "webrick", "~> 1.7"
 
 # Site map plugin
 gem 'jekyll-sitemap'
+
+# Gemfile
+gem "jekyll‑seo‑tag"

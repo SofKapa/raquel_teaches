@@ -1,0 +1,66 @@
+# Site settings
+title: "Raquel Teaches Languages"
+tagline: "Interactive Portuguese, English & French Lessons in Lisbon & Online"
+description: "Personalized and fun language lessons—perfect for beginners and flexible for all levels. In‑person in Lisbon or online. Ideal for expats, exam prep, and professionals."
+url: "https://raquelteacheslanguages.com"    # your live domain
+baseurl: ""                                   # leave blank if site is served from root
+
+# Author info
+author:
+  name: "Raquel"
+  twitter: "RaquelTeaches"
+  url: "https://raquelteacheslanguages.com"
+
+# SEO and social
+logo: "/assets/images/logo.png"
+image: "/assets/images/raquel-teaches-languages-social-banner.jpg"
+
+twitter:
+  username: "RaquelTeaches"
+  card: summary_large_image
+
+facebook:
+  publisher: "https://www.facebook.com/raquelteacheslanguages"
+  app_id:    1234567890   # optional if you own a Facebook App
+
+social:
+  name: "Raquel Teaches Languages"
+  links:
+    - https://www.instagram.com/raquel_teaches
+    - https://www.facebook.com/raquelteacheslanguages
+    - https://twitter.com/RaquelTeaches
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalinks & output
+permalink: pretty
+future: false
+
+# Defaults (front matter defaults)
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      seo_description_max_words: 160
+
+# Markdown & Liquid settings
+markdown: kramdown
+highlighter: rouge
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+incremental: false
+
+# Google & other webmaster verifications (if needed)
+webmaster_verifications:
+  google: "your-google-verification-code"
+  bing:   "your-bing-code"
