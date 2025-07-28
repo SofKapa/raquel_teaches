@@ -2,4 +2,76 @@
 layout: default
 title: Homepage
 ---
-<h1>Welcome to your homepage!</h1>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>What I Offer</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Portuguese</h3>
+        <p>Start from zero with conversational and practical Portuguese for everyday life in Lisbon.</p>
+      </div>
+      <div class="card">
+        <h3>English</h3>
+        <p>English lessons for true beginners—focus on speaking, listening, and building confidence.</p>
+      </div>
+      <div class="card">
+        <h3>French</h3>
+        <p>Fun and engaging French classes designed for complete beginners.</p>
+      </div>
+    </div>
+    <div class="locations">
+      <p><strong>Where:</strong> In-person in Lisbon (your place or coffee shop) or online.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Maria, a passionate language teacher fluent in eight languages and dedicated to helping beginners build a solid foundation. My classes are interactive, tailored to your goals, and designed to make learning enjoyable and effective.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Beginners Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>“Maria made learning Portuguese a joy! I went from zero to ordering in cafes in just a month.”</p>
+        <p class="author">— João, Lisbon</p>
+      </div>
+      <div class="testimonial">
+        <p>“Her English lessons were fun and tailored to me. Now I can talk freely!”</p>
+        <p class="author">— Anna, Online Student</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Booking -->
+  <section id="contact" class="contact">
+    <h2>Ready to Begin?</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="language">Language*</label>
+      <select id="language" name="language" required>
+        <option value="Portuguese">Portuguese</option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+      </select>
+      
+      <label for="mode">Mode*</label>
+      <select id="mode" name="mode" required>
+        <option value="In-person">In-person (Lisbon)</option>
+        <option value="Online">Online</option>
+      </select>
+      
+      <label for="message">Tell me about your goals</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      
+      <button type="submit" class="btn-primary">Send & Book a Lesson</button>
+    </form>
+  </section>
