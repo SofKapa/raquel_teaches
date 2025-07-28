@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <title>{{page.title}}</title>
+{% include cookie-banner.html %} 
+    
+<!-- This is the head - External Links & Ressources ---------->
+{% include head.html %}
+    
 </head>
 
+
+
+
+<!-- This is the body -->
 <body>
-    {{content}}
+
+<!-- Custom cursor -->
+
+<div class="custom-cursor"></div>
+
+
+<!-- HEADER ---------------------------------------------------------------------------->
+{% include header.html %}
+
+
+<!-- CONTENT --------------------------------------------------------------------------->
+{{content}}
+
+
+<!-- FOOTER ---------------------------------------------------------------------------->
+{% include footer.html %}
+
+
+<!-- SCRIPTS ---------------------------------------------------------------------------->
+{% include scripts.html %}
+
+
 </body>
+
 
 </html>
