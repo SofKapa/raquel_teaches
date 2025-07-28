@@ -1,16 +1,18 @@
-# Gemfile we create to be able to host our website on Netlify
-# Keeps our LOCAL version of Jekyll up to date with the Netlify version
+# Gemfile
 
 source "https://rubygems.org"
-gem "jekyll"
 
-# Thing I had to add to make the site run
+# Specify the Jekyll version
+gem "jekyll", "~> 4.4.1"
+
+# Required for Windows environments
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+# Webrick is needed for serving the site
 gem "webrick", "~> 1.7"
 
-
-# Site map plugin
+# Sitemap plugin
 gem 'jekyll-sitemap'
 
-# Gemfile
-gem "jekyll‑seo‑tag"
+# SEO tag plugin
+gem "jekyll-seo-tag"

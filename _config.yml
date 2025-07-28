@@ -32,8 +32,12 @@ social:
 
 # Plugins
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
+
+
+# Gems
+gems:
+  - jekyll-seo-tag
 
 # Permalinks & output
 permalink: pretty
