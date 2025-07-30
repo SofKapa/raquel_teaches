@@ -33,10 +33,6 @@ social:
 # Plugins
 plugins:
   - jekyll-sitemap
-
-
-# Gems
-gems:
   - jekyll-seo-tag
 
 # Permalinks & output
@@ -60,9 +56,10 @@ highlighter: rouge
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor
-incremental: false
+  - node_modules/
+  - vendor/
+  - tmp/
+  - _drafts/
 
 # Google & other webmaster verifications (if needed)
 webmaster_verifications:
