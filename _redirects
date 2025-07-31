@@ -1,5 +1,5 @@
-/coming-soon/*   /coming‑soon/:splat   200!
-/*                /coming-soon/index.html 200!
+/assets/*    /assets/:splat    200!
 
-/assets/*  /assets/:splat  200
-/*         /index.html     200
+/coming-soon/*   /coming-soon/:splat   200!
+
+/*           /coming-soon/       200
