@@ -53,6 +53,7 @@ markdown: kramdown
 highlighter: rouge
 
 # Build settings
+include: [_redirects]
 exclude:
   - Gemfile
   - Gemfile.lock
