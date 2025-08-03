@@ -25,7 +25,7 @@ body {
 
 h1, h2, h3 { 
   font-family: "Aboreto", sans-serif;
-  color: #3D405B;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 0.5em;
  }
@@ -108,7 +108,7 @@ a:hover { text-decoration: underline; }
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #3D405B;
+  background-color: #81B29A;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -116,7 +116,7 @@ a:hover { text-decoration: underline; }
   transition: background-color 0.3s ease;
 }
 .download-btn:hover {
-  background-color: #003fcc;
+  background-color: #3D405B;
 }
 
 
