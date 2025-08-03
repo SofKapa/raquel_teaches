@@ -11,7 +11,8 @@
 
 body {
   background-color: #F2CC8F;
-  color: #333; /* ensure good readability */
+  font-family: "Jost", sans-serif;
+  color: #3D405B; /* ensure good readability */
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -19,7 +20,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: Arial, sans-serif;
   line-height: 1.6; 
 }
 
