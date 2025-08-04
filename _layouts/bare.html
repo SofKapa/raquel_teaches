@@ -13,63 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
-    <!-- Inline styles -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <style>
-      body {
-        background-color: #F2CC8F;
-        font-family: "Jost", sans-serif;
-        color: #3D405B; 
-        font-weight: 400;
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        line-height: 1.6;
-        position: relative;
-        overflow: hidden;
-      }
-
-      body::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60vw;
-        height: 60vh; 
-        max-width: 100%;
-        max-height: 100%;
-        background: url('/assets/logos/rt-logo-round.svg') center center no-repeat;
-        background-size: contain;
-        opacity: 0.10;
-        z-index: 0;
-        pointer-events: none;
-      }
-
-
-      /* 🌐 Mobile responsiveness */
-      @media (max-width: 768px) {
-        body::before {
-          width: 90vw;
-          height: 90vw;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-
-        p {
-          font-size: 1rem;
-          padding: 0 1rem;
-        }
-      }
-    </style>
-
-
     <!-- CSS Stylesheet - always last -->
     <link rel="stylesheet" href="/style.css">
 

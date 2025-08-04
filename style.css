@@ -13,6 +13,7 @@ body {
   background-color: #F2CC8F;
   font-family: "Jost", sans-serif;
   color: #3D405B; /* ensure good readability */
+  font-weight: 400;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -21,7 +22,29 @@ body {
   align-items: center;
   text-align: center;
   line-height: 1.6; 
+  position: relative;
+  overflow: hidden;
 }
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vh; 
+  max-width: 100%;
+  max-height: 100%;
+  background: url('/assets/logos/rt-logo-round.svg') center center no-repeat;
+  background-size: contain;
+  opacity: 0.10;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
 
 h1, h2, h3 { 
   font-family: "Aboreto", sans-serif;
@@ -29,6 +52,10 @@ h1, h2, h3 {
   font-size: 2.5rem;
   margin-bottom: 0.5em;
  }
+
+h1 {
+  padding: 1rem;
+}
 
 
 p {
@@ -210,8 +237,30 @@ footer {
 ====================================================================================================================================== */
 
 @media (min-width: 768px) {
+
+
   .testimonials .testimonial-cards { flex-direction: row; }
   .testimonial { flex: 1; }
   .contact-form { grid-template-columns: 1fr 1fr; }
   .contact-form textarea { grid-column: span 2; }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+  body::before {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    padding: 0 1rem;
+  }
+
 }
