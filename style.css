@@ -176,6 +176,13 @@ section {
   margin: 0 auto; 
 }
 
+
+/* ======================================================================================================================================
+   SERVICES
+====================================================================================================================================== */
+
+
+
 .services .service-cards {
   display: flex; flex-wrap: wrap; gap: 1em;
 }
@@ -184,7 +191,75 @@ section {
   border: 1px solid #ddd; border-radius: 6px;
   padding: 1em;
 }
-.locations { margin-top: 1em; font-style: italic; }
+
+.packages {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.packages h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: var(--rt-dark);
+}
+
+.package-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.package-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+  color: var(--rt-dark);
+}
+
+.package-card .duration {
+  font-style: italic;
+  margin-bottom: 0.75em;
+  color: #555;
+}
+
+.package-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1em;
+}
+
+.package-card li::before {
+  content: "✔";
+  margin-right: 0.5em;
+  color: var(--rt-green);
+}
+
+.package-card .price {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: var(--rt-red);
+}
+
+.package-note {
+  margin-top: 1em;
+  font-style: italic;
+  color: #555;
+}
 
 
 
