@@ -1,4 +1,4 @@
-<!-- TECHNICAL METADATA / RESPONSIVENESS ----------------> 
+<!-- TECHNICAL METADATA / RESPONSIVENESS ---------------->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,29 +6,24 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-
 <!-- Favicon - Website Icon -->
 
 <!-- SEO METADATA --------------------------------------->
 <!-- General SEO -->
-<title> {{ page.seo.title | default: site.data.site-settings.seo.title }} </title> 
-
-
+<title>{{ page.seo.title | default: site.data.site-settings.seo.title }}</title>
 <meta name="description" content="{{ page.seo.description | default: site.data.site-settings.seo.description }}">
 <meta name="keywords" content="{{ page.seo.keywords | default: site.data.site-settings.seo.keywords }}">
 
-
-
-<!--  Social media sharing META Tags -->
+<!-- Social media sharing META Tags -->
 <meta property="og:title" content="{{ page.title | default: site.data.site-settings.seo.title }}">
-<meta property="og:description" content="{{ page.seo.description | default: site.data.site-settings.seo.description }}"> 
+<meta property="og:description" content="{{ page.seo.description | default: site.data.site-settings.seo.description }}">
 <meta property="og:image" content="{{ (page.seo.social_image | default: site.data.site-settings.seo.social_image) | absolute_url }}">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta name="og:site_name" content="{{ site.data.site-settings.seo.site_name }}">
-<meta property="og:type" content="website" />
+<meta property="og:type" content="website">
 <meta property="og:image:alt" content="{{ page.seo.social_image_alt | default: site.data.site-settings.seo.social_image_alt }}">
 
 <meta name="twitter:card" content="{{ page.seo.twitter_card | default: site.data.site-settings.seo.twitter_card }}">
@@ -38,8 +33,6 @@
 
 <link rel="icon" type="image/png" href="{{ site.data.site-settings.seo.favicon_image }}">
 
-
-
 <!-- Google Page Indexation -->
 {% if page.seo.hide-from-google == true %}
     <meta name="robots" content="noindex, nofollow">
@@ -47,39 +40,28 @@
     <meta name="robots" content="index, follow">
 {% endif %}
 
-
-
 <!-- Google Search Console Website Ownership Verification -->
 
-
-
 <!-- Pinterest Meta Tags ------------>
-
-
-
 
 <!-- EXTERNAL STYLESHEETS ------------------------------->
 <!-- Fontawesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
 <!-- Grid Stylesheet -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-    
-<!-- Google Fonts -->
-
-
-
 
 <!-- Slick - Sliding galleries/testimonials -->
-<!--- Main CSS that handles all the functionality --->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!--- Slick theme that handles the way everything slides. Optional but very helpful --->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
 <!-- Animate on scroll -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+<!-- Google Fonts | Aboreto & Jost -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <!-- CSS Stylesheet - always last -->
 <link rel="stylesheet" href="/style.css">
-
