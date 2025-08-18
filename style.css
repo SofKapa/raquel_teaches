@@ -16,7 +16,7 @@ body {
 }
 
 h1, h2, h3 { 
-  color: #222;
+  color: var(--rt-red);
   margin-bottom: 0.5em; 
 }
 
@@ -102,7 +102,7 @@ a:hover { text-decoration: underline; }
 }
 
 .logo {
-  width: 200px;   /* or whatever size fits your header */
+  width: 150px;   /* or whatever size fits your header */
   height: auto;
 }
 
@@ -310,14 +310,17 @@ section {
    ABOUT
 ====================================================================================================================================== */
 
-.about { background: #f9f9f9; text-align: center; }
+.about { 
+  background: #f9f9f9;
+  text-align: center; 
+}
 
 .highlight {
   font-size: 1.25em;
   font-weight: 500;
-  background: rgba(130, 210, 180, 0.15); /* subtle highlight */
+  background: #F2CC8F20; /* 12–20% opacity */
   padding: 0.75em 1em;
-  border-left: 4px solid var(--rt-green);
+  border-left: 4px solid var(--rt-yellow);
   margin: 1em 0;
   border-radius: 6px;
   line-height: 1.5;

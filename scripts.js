@@ -17,4 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Observe each audience item
   items.forEach(item => observer.observe(item));
 
+  
+
 });
