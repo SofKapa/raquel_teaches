@@ -8,10 +8,24 @@
     box-sizing: border-box;
 }
 
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-h1, h2, h3 { color: #222; margin-bottom: 0.5em; }
+body { 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  color: var(--rt-dark); 
+}
+
+h1, h2, h3 { 
+  color: #222;
+  margin-bottom: 0.5em; 
+}
+
 p { margin-bottom: 1em; }
-a { color: #008cba; text-decoration: none; }
+
+a { 
+  color: var(--rt-green); 
+  text-decoration: none; 
+}
+
 a:hover { text-decoration: underline; }
 
 
@@ -20,7 +34,14 @@ a:hover { text-decoration: underline; }
    BRAND COLORS
 ====================================================================================================================================== */
 
-
+:root {
+  /* Brand palette */
+  --rt-light: #F4F1DE;   /* Light, airy base */
+  --rt-dark: #3D405B;    /* Deep, grounding tone */
+  --rt-red: #E07A5F;     /* Warm accent */
+  --rt-green: #81B29A;   /* Calm, balanced highlight */
+  --rt-yellow: #F2CC8F;  /* Vibrant, attention-grabbing highlight */
+}
 
 /* ======================================================================================================================================
    BUTTONS
@@ -47,14 +68,26 @@ a:hover { text-decoration: underline; }
 
 /* Glassmorphism effect for the header */
 .glass-header {
+  /* Stick to top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  
+  /* Layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2%;
-  background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
-  backdrop-filter: blur(10px);            /* Blur background content behind header */
-  -webkit-backdrop-filter: blur(10px);    /* Safari support */
-  border-radius: 0.5rem;                  /* Soothing rounded corners */
+  
+  /* Glass & blur effect */
+  background: rgba(61, 64, 91, 0.6); /* 60% opacity of --rt-dark */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Styling */
+  border-bottom: 1px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -64,10 +97,16 @@ a:hover { text-decoration: underline; }
   font-weight: bold;
 }
 
+.logo {
+  width: 200px;   /* or whatever size fits your header */
+  height: auto;
+}
+
 .nav-container a {
+  font-size: 1.5rem;
   margin-left: 1rem;
   text-decoration: none;
-  color: inherit;
+  color: var(--rt-light);
 }
 
 .emphasis-button {
@@ -100,7 +139,9 @@ a:hover { text-decoration: underline; }
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/assets/images/placeholder_student-doing-exercises.jpg') center center / cover no-repeat;
   color: white;
-  padding: 6em 1em;
+
+  /* Add top padding equal to header height */
+  padding: calc(6em + 216px) 1em 6em 1em; /* top right bottom left */
 }
 
 .hero-content {
@@ -111,7 +152,7 @@ a:hover { text-decoration: underline; }
 
 .hero h1 {
   font-size: 2.5em;
-  color: white;
+  color: var(--rt-light);
   margin-bottom: 0.5em;
 }
 
@@ -203,6 +244,14 @@ footer {
 ====================================================================================================================================== */
 
 @media (min-width: 768px) {
+
+  /* Hero Banner */
+  .hero {
+    padding-top: calc(6em + 150px); /* smaller header on mobile */
+  }
+
+
+
   .testimonials .testimonial-cards { flex-direction: row; }
   .testimonial { flex: 1; }
   .contact-form { grid-template-columns: 1fr 1fr; }
