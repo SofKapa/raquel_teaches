@@ -115,13 +115,15 @@ a:hover { text-decoration: underline; }
 
 .emphasis-button {
   padding: 0.5rem 1rem;
+  border-radius: 40px;
   border: 2px solid currentColor;
   font-weight: 500;
 }
 
 /* Hover states for buttons */
 .emphasis-button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--rt-yellow);
+  color: var(--rt-dark);
 }
 
 /* ======================================================================================================================================
