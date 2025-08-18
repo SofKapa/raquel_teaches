@@ -166,6 +166,13 @@ a:hover { text-decoration: underline; }
 
 
 
+.hero-location {
+  font-size: 1.1rem;
+  margin: 0.75em 0 1.25em 0;
+  color: var(--rt-light);
+}
+
+
 
 /* ======================================================================================================================================
    SECTIONS
@@ -268,6 +275,18 @@ section {
 ====================================================================================================================================== */
 
 .about { background: #f9f9f9; text-align: center; }
+
+.highlight {
+  font-size: 1.25em;
+  font-weight: 500;
+  background: rgba(130, 210, 180, 0.15); /* subtle highlight */
+  padding: 0.75em 1em;
+  border-left: 4px solid var(--rt-green);
+  margin: 1em 0;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
 
 
 /* ======================================================================================================================================
