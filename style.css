@@ -17,6 +17,12 @@ a:hover { text-decoration: underline; }
 
 
 /* ======================================================================================================================================
+   BRAND COLORS
+====================================================================================================================================== */
+
+
+
+/* ======================================================================================================================================
    BUTTONS
 ====================================================================================================================================== */
 
@@ -33,27 +39,101 @@ a:hover { text-decoration: underline; }
 
 
 
+
+/* ======================================================================================================================================
+   HEADER
+====================================================================================================================================== */
+
+
+/* Glassmorphism effect for the header */
+.glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
+  backdrop-filter: blur(10px);            /* Blur background content behind header */
+  -webkit-backdrop-filter: blur(10px);    /* Safari support */
+  border-radius: 0.5rem;                  /* Soothing rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Simple utility styles */
+.logo-container .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-container a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.emphasis-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid currentColor;
+  font-weight: 500;
+}
+
+/* Hover states for buttons */
+.emphasis-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 /* ======================================================================================================================================
    HERO BANNER
 ====================================================================================================================================== */
 
 .hero {
-  background: url('/assets/images/hero-lisbon.jpg') center/cover no-repeat;
-  color: white;
+  /* Layout */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
+  /* Background image with semi-transparent overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/assets/images/placeholder_student-doing-exercises.jpg') center center / cover no-repeat;
+  color: white;
   padding: 6em 1em;
 }
-.hero-content { max-width: 600px; margin: 0 auto; }
-.hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-.hero p { font-size: 1.2em; }
 
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1; /* Ensures content stays above the overlay */
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.btn-primary {
+  /* If you have styles already, you can keep them – else add here */
+  /* E.g.: padding, background-color, color, border-radius, etc. */
+}
 
 
 /* ======================================================================================================================================
    SECTIONS
 ====================================================================================================================================== */
 
-section { padding: 4em 1em; max-width: 900px; margin: 0 auto; }
+section { 
+  padding: 4em 1em; 
+  margin: 0 auto; 
+}
+
 .services .service-cards {
   display: flex; flex-wrap: wrap; gap: 1em;
 }
