@@ -189,6 +189,42 @@ section {
 ====================================================================================================================================== */
 
 
+.lesson-types {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.lesson-intro {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 0.75em;
+}
+
+.lesson-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.lesson-list li {
+  background: rgba(130, 210, 180, 0.15);
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  font-weight: 500;
+  color: var(--rt-dark);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lesson-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
 
 .services .service-cards {
   display: flex; flex-wrap: wrap; gap: 1em;
