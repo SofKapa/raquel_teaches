@@ -16,7 +16,6 @@ body {
 }
 
 h1, h2, h3 { 
-  color: var(--rt-red);
   margin-bottom: 0.5em; 
 }
 
@@ -211,56 +210,147 @@ section {
   color: #333;
 }
 
+
+
 /* ======================================================================================================================================
    SERVICES
 ====================================================================================================================================== */
 
-
-.lesson-types {
+/* .services {
+  background-color: var(--rt-dark);
+}
+.services h2 {
+  color: var(--rt-light);
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
-.lesson-intro {
-  font-weight: 500;
-  font-size: 1.2em;
-  margin-bottom: 0.75em;
-}
-
-.lesson-list {
-  list-style: none;
-  padding-left: 0;
+.lesson-options {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
+  gap: 0.75rem;
 }
 
-.lesson-list li {
-  background: rgba(130, 210, 180, 0.15);
-  padding: 0.5em 1em;
-  border-radius: 30px;
-  font-weight: 500;
-  color: var(--rt-dark);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+.lesson-options button {
+  padding: 0.6em 1.2em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: var(--rt-yellow);
+  color: #333;
+  font-size: 1rem;
 }
 
-.lesson-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-
-
-.services .service-cards {
-  display: flex; flex-wrap: wrap; gap: 1em;
-}
-.services .card {
-  flex: 1 1 calc(33% - 1em);
-  border: 1px solid #ddd; border-radius: 6px;
+.card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
   padding: 1em;
+} */
+
+
+/* ======================================================================
+   SERVICES
+====================================================================== */
+
+.services {
+  background-color: var(--rt-dark);
+  padding: 4rem 2%;
+  color: var(--rt-light);
+  font-family: 'Jost', sans-serif;
 }
+
+.services h2 {
+  color: var(--rt-light);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.col-6 {
+  flex: 1 1 45%;
+}
+
+.service-note, .service-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* one button per row with spacing */
+}
+
+.lesson-options button {
+  padding: 0.8em 1.5em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: var(--rt-yellow);
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 300px; /* ensures uniform width */
+}
+
+.lesson-options button:hover {
+  background: #ffc107;
+  transform: translateY(-2px);
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.col-4 {
+  flex: 1 1 30%;
+}
+
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--rt-dark);
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* ======================================================================================================================================
+   PACKAGES
+====================================================================================================================================== */
 
 .packages {
   margin-top: 3em;
@@ -456,7 +546,16 @@ footer {
     padding-top: calc(6em + 150px); /* smaller header on mobile */
   }
 
-
+  /* Services Section */
+  .col-6 {
+    flex: 1 1 100%;
+  }
+  .col-4 {
+    flex: 1 1 100%;
+  }
+  .lesson-options button {
+    max-width: 100%;
+  }
 
   .testimonials .testimonial-cards { flex-direction: row; }
   .testimonial { flex: 1; }
