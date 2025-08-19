@@ -267,21 +267,22 @@ section {
   font-weight: 600;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
+.services-grid {
+  padding: 2rem 4rem; /* top/bottom 2rem, left/right 1rem */
 }
 
-.col-6 {
-  flex: 1 1 45%;
+
+.service-note {
+  font-family: 'Aboreto', sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
 }
 
-.service-note, .service-intro {
+.service-intro {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .lesson-options {
