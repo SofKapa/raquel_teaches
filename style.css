@@ -160,6 +160,8 @@ section {
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/assets/images/placeholder_student-doing-exercises.jpg') center center / cover no-repeat;
   color: white;
+  border-bottom: 1px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
   /* Add top padding equal to header height */
   padding: calc(6em + 216px) 1em 6em 1em; /* top right bottom left */
@@ -196,56 +198,68 @@ section {
 
 .highlight-section {
   background-color: var(--rt-yellow);
+  border-bottom: 1px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Attention grabbing headline spacing */
 .highlight {
   max-width: 800px;
-  margin: 0.5em auto;
-  padding: 1em 1.5em;
+  margin: 0.5em auto 3rem auto; /* add bottom margin for space before cards */
+  margin-bottom: 1rem;
+  padding: 5%;
   font-size: 1.5em;
   font-weight: 500;
   line-height: 1.6;
   border-left: 6px solid var(--rt-light); 
   border-radius: 4px;
-  color: #333;
-}
-
-
-
-/* ======================================================================================================================================
-   SERVICES
-====================================================================================================================================== */
-
-/* .services {
-  background-color: var(--rt-dark);
-}
-.services h2 {
-  color: var(--rt-light);
+  color: var(--rt-dark);
   text-align: center;
-  margin-bottom: 2rem;
 }
 
-.lesson-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+/* Service Cards Container */
+#service-cards {
+  display: flex; /* flex layout */
+  justify-content: center; /* center horizontally */
+  gap: 2rem; /* space between cards */
+  padding: 5%; /* padding so cards don’t touch edges */
+  flex-wrap: nowrap; /* prevent wrapping, keeps all in one row */
+  overflow-x: auto; optional: allow horizontal scroll on very small screens
 }
 
-.lesson-options button {
-  padding: 0.6em 1.2em;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  background: var(--rt-yellow);
-  color: #333;
-  font-size: 1rem;
-}
-
+/* Languages Cards */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1em;
-} */
+  background: var(--rt-light);
+  color: var(--rt-dark);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 0 0 28%; /* fixed width for all cards */
+  max-width: 320px; /* keeps cards uniform */
+  display: flex;
+  flex-direction: column; /* so content stacks */
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--rt-green);
+}
+
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
 
 
 /* ======================================================================
@@ -306,44 +320,8 @@ section {
 }
 
 .lesson-options button:hover {
-  background: #ffc107;
+  background: var(--rt-light);
   transform: translateY(-2px);
-}
-
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.col-4 {
-  flex: 1 1 30%;
-}
-
-.card {
-  background: #fff;
-  color: #333;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--rt-dark);
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 
 
@@ -540,11 +518,30 @@ footer {
    RESPONSIVENESS
 ====================================================================================================================================== */
 
+
+@media (max-width: 1024px) {
+
+  /* Highlight Section */
+  .card {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+
+
+
 @media (min-width: 768px) {
 
   /* Hero Banner */
   .hero {
     padding-top: calc(6em + 150px); /* smaller header on mobile */
+  }
+
+  /* Highlight Section */
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   /* Services Section */
