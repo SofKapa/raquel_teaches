@@ -60,10 +60,25 @@ a:hover { text-decoration: underline; }
   border-radius: 40px;
   transition: background 0.3s;
 }
-.btn-primary:hover { background: var(--rt-green); }
+.btn-primary:hover { 
+  background: var(--rt-green);
+  color: var(--rt-light);
+  text-decoration: none; }
 
 
+  
+/* ======================================================================================================================================
+   SECTIONS & SPECIAL STYLES
+====================================================================================================================================== */
 
+section { 
+  padding: 4em 1em; 
+  margin: 0 auto; 
+}
+
+.featured {
+  color: var(--rt-light);
+}
 
 /* ======================================================================================================================================
    HEADER
@@ -126,6 +141,7 @@ a:hover { text-decoration: underline; }
   color: var(--rt-dark);
 }
 
+
 /* ======================================================================================================================================
    HERO BANNER
 ====================================================================================================================================== */
@@ -167,7 +183,6 @@ a:hover { text-decoration: underline; }
 }
 
 
-
 .hero-location {
   font-size: 1.1rem;
   margin: 0.75em 0 1.25em 0;
@@ -177,14 +192,24 @@ a:hover { text-decoration: underline; }
 
 
 /* ======================================================================================================================================
-   SECTIONS
+   HIGHLIGHT SECTION
 ====================================================================================================================================== */
 
-section { 
-  padding: 4em 1em; 
-  margin: 0 auto; 
+.highlight-section {
+  background-color: var(--rt-yellow);
 }
 
+.highlight {
+  max-width: 800px;
+  margin: 0.5em auto;
+  padding: 1em 1.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.6;
+  border-left: 6px solid var(--rt-light); 
+  border-radius: 4px;
+  color: #333;
+}
 
 /* ======================================================================================================================================
    SERVICES
@@ -315,17 +340,6 @@ section {
 .about { 
   background: #f9f9f9;
   text-align: center; 
-}
-
-.highlight {
-  font-size: 1.25em;
-  font-weight: 500;
-  background: #F2CC8F20; /* 12–20% opacity */
-  padding: 0.75em 1em;
-  border-left: 4px solid var(--rt-yellow);
-  margin: 1em 0;
-  border-radius: 6px;
-  line-height: 1.5;
 }
 
 
