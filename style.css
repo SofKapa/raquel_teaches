@@ -473,12 +473,112 @@ section {
 /* ======================================================================================================================================
    TESTIMONIALS
 ====================================================================================================================================== */
-
-.testimonials .testimonial-cards {
-  display: flex; flex-direction: column; gap: 1.5em;
+.testimonials {
+  padding: 4rem 2%;
+  background: var(--rt-light);
+  text-align: center;
 }
-.testimonial { background: #fff; border-left: 4px solid #008cba; padding: 1em; }
-.author { font-weight: bold; margin-top: 0.5em; text-align: right; }
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+/* Carousel */
+.testimonial-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* card width */
+}
+
+.testimonial-card {
+  flex: 0 0 100%; /* one card visible */
+  max-width: 100%;
+  padding: 2rem 2rem 2rem 3rem;
+  /* border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+/* SVG Quote Icons */
+.quote-icon img {
+  width: 40px;       /* change to desired width */
+  height: 40px;      /* change to desired height */
+  object-fit: contain; /* keeps the SVG proportions */
+}
+
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
+}
+
+.quote-icon.right {
+  left: auto;
+  right: 1rem;
+  top: auto;
+  bottom: 0;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 2rem 0 1rem;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--rt-dark);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn.prev {
+  left: 0.5rem;
+}
+
+.scroll-btn.next {
+  right: 0.5rem;
+}
 
 
 
@@ -555,8 +655,5 @@ footer {
     max-width: 100%;
   }
 
-  .testimonials .testimonial-cards { flex-direction: row; }
-  .testimonial { flex: 1; }
-  .contact-form { grid-template-columns: 1fr 1fr; }
-  .contact-form textarea { grid-column: span 2; }
+
 }
