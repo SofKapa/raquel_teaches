@@ -29,19 +29,30 @@ document.addEventListener('DOMContentLoaded', function() {
   const wrapper = document.querySelector(".testimonial-wrapper");
   const cards = wrapper.querySelectorAll(".testimonial-card");
 
+  // Get exact width of one card including any margin
+  function getCardWidth(card) {
+    const style = window.getComputedStyle(card);
+    const margin = parseInt(style.marginLeft) + parseInt(style.marginRight);
+    return card.offsetWidth + margin;
+  }
+
+  const cardWidth = getCardWidth(cards[0]);
   let index = 0;
 
   function showCard(i) {
+    if (i < 0) i = 0;
+    if (i >= cards.length) i = cards.length -1;
     index = i;
-    if (index < 0) index = 0;
-    if (index >= cards.length) index = cards.length -1;
-    wrapper.style.transform = `translateX(-${index * 100}%)`;
+    wrapper.scrollTo({
+      left: index * cardWidth,
+      behavior: 'smooth'
+    });
   }
 
   nextBtn.addEventListener('click', () => showCard(index + 1));
   prevBtn.addEventListener('click', () => showCard(index - 1));
 
-  // optional: initialize first card
+  // Initialize first card
   showCard(0);
 
 

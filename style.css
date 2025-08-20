@@ -497,21 +497,24 @@ section {
   display: flex;
   overflow: hidden;
   width: 100%;
-  max-width: 600px; /* card width */
+  max-width: 600px; /* single card width */
+  scroll-snap-type: x mandatory;
 }
 
 .testimonial-card {
-  flex: 0 0 100%; /* one card visible */
-  max-width: 100%;
+  flex: 0 0 100%;  /* one card at a time */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.card-content {
+  width: 100%;
   padding: 2rem 2rem 2rem 3rem;
   /* border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1); */
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  scroll-snap-align: start;
-  margin: 0;
 }
 
 /* SVG Quote Icons */
@@ -521,6 +524,8 @@ section {
   object-fit: contain; /* keeps the SVG proportions */
 }
 
+
+/* Quote icons */
 .quote-icon {
   position: absolute;
   top: 0;
@@ -533,8 +538,8 @@ section {
 .quote-icon.right {
   left: auto;
   right: 1rem;
-  top: auto;
   bottom: 0;
+  top: auto;
 }
 
 .testimonial-text {
@@ -544,19 +549,26 @@ section {
   margin: 2rem 0 1rem;
 }
 
+/* Author below card */
 .author {
-  text-align: right;
+  margin-top: 1rem;
+  text-align: center;
   font-weight: bold;
   font-size: 1rem;
 }
 
 /* Buttons */
+.scroll-btn img {
+  width: 3rem;   /* adjust size */
+  height: 3rem;
+  display: block;
+  margin: auto;    /* center inside button */
+}
+
 .scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--rt-dark);
-  color: #fff;
   border: none;
   border-radius: 50%;
   width: 2.5rem;
@@ -573,11 +585,13 @@ section {
 }
 
 .scroll-btn.prev {
-  left: 0.5rem;
+  left: 10rem;
+  background-color: transparent;
 }
 
 .scroll-btn.next {
-  right: 0.5rem;
+  right: 10rem;
+  background-color: transparent;
 }
 
 
