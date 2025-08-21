@@ -662,6 +662,10 @@ section {
    CONTACT FORM
 ====================================================================================================================================== */
 
+.contact {
+  max-width: 600px;
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr;
