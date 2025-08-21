@@ -243,6 +243,7 @@ section {
   background: var(--rt-light);
   color: var(--rt-dark);
   border-radius: 12px;
+  border: 2px solid var(--rt-light);
   padding: 1.5rem;
 
   background: rgba(61, 64, 91, 0.6); /* 60% opacity of --rt-dark */
@@ -326,7 +327,7 @@ section {
 .lesson-options button {
   padding: 0.8em 1.5em;
   border-radius: 50px;
-  border: none;
+  border: 2px solid var(--rt-light);
   cursor: pointer;
   background: var(--rt-yellow);
   color: #333;
