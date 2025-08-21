@@ -56,4 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
   showCard(0);
 
 
+  // PACKAGE CARDS
+  document.querySelectorAll('.package-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.querySelector('.card-inner').classList.toggle('flipped');
+    });
+  });
+
+
 });
