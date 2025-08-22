@@ -363,6 +363,7 @@ section {
 }
 
 .testimonials h2 {
+  color: var(--rt-dark);
   margin-bottom: 3rem;
   font-weight: 600;
 }
@@ -737,6 +738,8 @@ section {
 #contact {
   padding:0;
   background-color: var(--rt-dark);
+  border-bottom: 2px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 #contact h2 {
@@ -788,16 +791,50 @@ section {
   border-right: 2px solid var(--rt-light);
 }
 
+
+
 /* ======================================================================================================================================
    FOOTER
 ====================================================================================================================================== */
 
-footer {
-  text-align: center; padding: 2em 1em; background: #f1f1f1;
-  font-size: 0.9em;
+.footer {
+  background-color: var(--rt-yellow);
+  color: var(--rt-dark);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+
+  /* Flex for one-line layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.footer-text {
+  margin: 0;
+  font-family: 'Aboreto', sans-serif;
+  font-weight: bold;
+}
 
+.footer-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--rt-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: var(--rt-light);
+}
+
+.footer-links span {
+  color: var(--rt-dark);
+}
 
 
 
