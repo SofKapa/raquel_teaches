@@ -346,6 +346,130 @@ section {
 
 
 /* ======================================================================================================================================
+   TESTIMONIALS
+====================================================================================================================================== */
+.testimonials {
+  padding: 4rem 2%;
+  background: var(--rt-light);
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+/* Carousel */
+.testimonial-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* single card width */
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial-card {
+  flex: 0 0 100%;  /* one card at a time */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.card-content {
+  width: 100%;
+  padding: 2rem 2rem 2rem 3rem;
+  /* border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); */
+  position: relative;
+}
+
+/* SVG Quote Icons */
+.quote-icon img {
+  width: 40px;       /* change to desired width */
+  height: 40px;      /* change to desired height */
+  object-fit: contain; /* keeps the SVG proportions */
+}
+
+
+/* Quote icons */
+.quote-icon {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
+}
+
+.quote-icon.right {
+  left: auto;
+  right: 1rem;
+  bottom: 0;
+  top: auto;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 2rem 0 1rem;
+}
+
+/* Author below card */
+.author {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.scroll-btn img {
+  width: 3rem;   /* adjust size */
+  height: 3rem;
+  display: block;
+  margin: auto;    /* center inside button */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn.prev {
+  left: 10rem;
+  background-color: transparent;
+}
+
+.scroll-btn.next {
+  right: 10rem;
+  background-color: transparent;
+}
+
+
+/* ======================================================================================================================================
    ABOUT
 ====================================================================================================================================== */
 
@@ -394,6 +518,8 @@ section {
 
 .packages {
   background-color: var(--rt-dark);
+  border-bottom: 2px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .packages h2 {
@@ -523,6 +649,8 @@ section {
   background: var(--rt-yellow);
   padding: 4em 1em;
   text-align: center;
+  border-bottom: 2px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .audience h2 {
@@ -554,7 +682,7 @@ section {
   border: none;
   text-align: left;
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -591,140 +719,34 @@ section {
 
 
 
-/* ======================================================================================================================================
-   TESTIMONIALS
-====================================================================================================================================== */
-.testimonials {
-  padding: 4rem 2%;
-  background: var(--rt-light);
-  text-align: center;
-}
-
-.testimonials h2 {
-  margin-bottom: 3rem;
-  font-weight: 600;
-}
-
-/* Carousel */
-.testimonial-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.testimonial-wrapper {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px; /* single card width */
-  scroll-snap-type: x mandatory;
-}
-
-.testimonial-card {
-  flex: 0 0 100%;  /* one card at a time */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-}
-
-.card-content {
-  width: 100%;
-  padding: 2rem 2rem 2rem 3rem;
-  /* border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1); */
-  position: relative;
-}
-
-/* SVG Quote Icons */
-.quote-icon img {
-  width: 40px;       /* change to desired width */
-  height: 40px;      /* change to desired height */
-  object-fit: contain; /* keeps the SVG proportions */
-}
-
-
-/* Quote icons */
-.quote-icon {
-  position: absolute;
-  top: 0;
-  left: 1rem;
-  width: 40px;
-  height: 40px;
-  opacity: 0.2;
-}
-
-.quote-icon.right {
-  left: auto;
-  right: 1rem;
-  bottom: 0;
-  top: auto;
-}
-
-.testimonial-text {
-  font-size: 1.4rem;
-  font-style: italic;
-  line-height: 1.4;
-  margin: 2rem 0 1rem;
-}
-
-/* Author below card */
-.author {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-/* Buttons */
-.scroll-btn img {
-  width: 3rem;   /* adjust size */
-  height: 3rem;
-  display: block;
-  margin: auto;    /* center inside button */
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
-  z-index: 2;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.scroll-btn:hover {
-  opacity: 1;
-}
-
-.scroll-btn.prev {
-  left: 10rem;
-  background-color: transparent;
-}
-
-.scroll-btn.next {
-  right: 10rem;
-  background-color: transparent;
-}
-
-
 
 /* ======================================================================================================================================
-   CONTACT FORM
+   CONTACT
 ====================================================================================================================================== */
 
-.contact {
-  max-width: 600px;
+/* Contact Form */
+
+#contact {
+  padding:0;
+  background-color: var(--rt-dark);
+}
+
+#contact h2 {
+  color: var(--rt-light);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.form-section {
+  border-right: 2px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
@@ -732,11 +754,24 @@ section {
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-  width: 100%; padding: 0.75em; border: 1px solid #ccc;
+  color: var(--rt-dark);
+  width: 100%; padding: 0.75em; border: 2px solid var(--rt-light);
   border-radius: 4px;
 }
-.contact-form label { font-weight: bold; }
+.contact-form label {
+  color: var(--rt-yellow);
+  /* font-weight: bold;  */
+}
 
+
+/* Contact Image */
+.contact-image {
+  background-image: url("/assets/images/placeholder-about-me-photo.jpg");
+  background-size: cover;
+  background-position: 50% 35%;
+  min-height: 100%;
+  border-right: 2px solid var(--rt-light);
+}
 
 /* ======================================================================================================================================
    FOOTER
