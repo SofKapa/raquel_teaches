@@ -68,6 +68,11 @@ a:hover { text-decoration: underline; }
   margin-top: 1em;
   border-radius: 40px;
   transition: background 0.3s;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 .btn-primary:hover { 
   background: var(--rt-green);
@@ -754,14 +759,21 @@ section {
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: var(--rt-dark);
+  background-color: var(--rt-light);
   width: 100%; padding: 0.75em; border: 2px solid var(--rt-light);
   border-radius: 4px;
 }
+
 .contact-form label {
   color: var(--rt-yellow);
-  /* font-weight: bold;  */
+  font-weight: bold; 
 }
+
+
 
 
 /* Contact Image */
