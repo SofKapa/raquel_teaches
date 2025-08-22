@@ -628,6 +628,7 @@ section {
   list-style: none;
   padding-left: 0;
   margin: 0.5em 0 1em;
+  font-weight: bold;
 }
 
 .card-back li::before {
