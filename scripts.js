@@ -64,4 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  // WHO IS THIS FOR | AUDIENCE
+  document.querySelectorAll('.audience-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const item = toggle.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+
+
+
 });

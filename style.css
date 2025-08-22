@@ -345,92 +345,6 @@ section {
 
 
 
-
-/* ======================================================================================================================================
-   PACKAGES
-====================================================================================================================================== */
-
-.package-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-  perspective: 1000px; /* Enables 3D flip */
-}
-
-.package-card {
-  width: 250px;
-  height: 250px;
-  position: relative;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.package-card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  backface-visibility: hidden;
-  background: #fff;
-  padding: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.card-front h3 {
-  font-size: 1.5em;
-  color: var(--rt-dark);
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  flex-direction: column;
-  text-align: left;
-}
-
-.card-back ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0.5em 0 1em;
-}
-
-.card-back li::before {
-  content: "✔";
-  margin-right: 0.5em;
-  color: var(--rt-green);
-}
-
-.card-back .duration {
-  font-style: italic;
-  color: #555;
-}
-
-.card-back .price {
-  font-weight: bold;
-  font-size: 1.25em;
-  color: var(--rt-red);
-}
-
-/* Clickable on mobile */
-.card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
 /* ======================================================================================================================================
    ABOUT
 ====================================================================================================================================== */
@@ -474,6 +388,129 @@ section {
 
 
 
+/* ======================================================================================================================================
+   PACKAGES
+====================================================================================================================================== */
+
+.packages {
+  background-color: var(--rt-dark);
+}
+
+.packages h2 {
+  color: var(--rt-light);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.package-note-top {
+  color: var(--rt-yellow);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+.package-note-bottom {
+  color: var(--rt-yellow);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+
+.package-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  perspective: 1000px; /* Enables 3D flip */
+}
+
+.package-card {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.package-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--rt-yellow);
+
+
+  backface-visibility: hidden;
+  /* background: #fff; */
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-front h3 {
+  font-size: 1.5em;
+  color: var(--rt-dark);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  flex-direction: column;
+  text-align: left;
+}
+
+.card-back ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5em 0 1em;
+}
+
+.card-back li::before {
+  content: "✔";
+  margin-right: 0.5em;
+  color: var(--rt-green);
+}
+
+.card-back .duration {
+  font-style: italic;
+  color: var(--rt-light);
+}
+
+.card-back .price {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: var(--rt-light);
+  margin-bottom: 0rem;
+}
+
+
+/* Clickable on mobile */
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
 
 
 
@@ -481,8 +518,9 @@ section {
    WHO IS THIS FOR
 ====================================================================================================================================== */
 
+/* WHO IS THIS FOR */
 .audience {
-  background: #f9f9f9;
+  background: var(--rt-yellow);
   padding: 4em 1em;
   text-align: center;
 }
@@ -492,46 +530,66 @@ section {
   color: var(--rt-dark);
 }
 
-.audience-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
+.audience-list {
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
 }
 
 .audience-item {
-  opacity: 0;
-  transform: translateX(0);
-  font-size: 1.25em;
-  line-height: 1.5;
-  padding: 0.5em 1em;
-  border-left: 4px solid var(--rt-green);
-  background: #fff;
-  border-radius: 6px;
+  background: var(--rt-light);
+  border: 2px solid var(--rt-green);
+  border-radius: 8px;
+  margin-bottom: 1em;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Starting positions for animations */
-.from-left {
-  transform: translateX(-100%);
+.audience-toggle {
+  font-family:'Aboreto', sans-serif;
+  color: var(--rt-dark);
+  width: 100%;
+  padding: 1em;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-.from-right {
-  transform: translateX(100%);
+.audience-toggle .icon {
+  font-size: 1.5em;
+  color: var(--rt-green);
+  transition: transform 0.3s ease;
 }
 
-/* Animate in */
-.audience-item.animate {
-  animation: slideIn 0.8s forwards;
+.audience-item.active .icon {
+  transform: rotate(45deg);
 }
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.audience-content {
+  font-family: 'Jost', sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1em;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--rt-dark);
+  background: var(--rt-light);
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
+
+.audience-item.active .audience-content {
+  max-height: 200px; /* adjust if your text is longer */
+  padding: 1em;
+}
+
+
 
 /* ======================================================================================================================================
    TESTIMONIALS
