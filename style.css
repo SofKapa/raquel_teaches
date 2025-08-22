@@ -234,20 +234,10 @@ section {
   text-align: center;
 }
 
-/* Service Cards Container */
-#service-cards {
-  display: flex; /* flex layout */
-  justify-content: center; /* center horizontally */
-  gap: 2rem; /* space between cards */
-  padding: 5%; /* padding so cards don’t touch edges */
-  flex-wrap: nowrap; /* prevent wrapping, keeps all in one row */
-  overflow-x: auto; optional: allow horizontal scroll on very small screens
-}
 
 /* Languages Cards */
 .card {
-  background: var(--rt-light);
-  color: var(--rt-dark);
+  color: var(--rt-light);
   border-radius: 12px;
   border: 2px solid var(--rt-light);
   padding: 1.5rem;
@@ -264,12 +254,28 @@ section {
   flex-direction: column; /* so content stacks */
 }
 
-.card h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--rt-yellow);
+#service-cards {
+  display: flex;          /* keep all cards in a row */
+  gap: 2rem;              /* space between cards */
+  justify-content: center;
+  flex-wrap: nowrap;      /* no wrapping */
+  overflow-x: auto;       /* optional: allow horizontal scroll on very small screens */
+  padding: 5%;
 }
+
+.card h3 {
+  display: flex;          /* icon + text inline */
+  align-items: center;    /* vertical centering */
+  justify-content: center; /* center in card */
+  gap: 0.5rem;            /* space between icon and text */
+}
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 
 .card p {
   text-align: center;
