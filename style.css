@@ -642,12 +642,20 @@ section {
   color: var(--rt-light);
 }
 
-.card-back .price {
+/* .card-back .price {
   font-weight: bold;
   font-size: 1.25em;
   color: var(--rt-light);
   margin-bottom: 0rem;
+} */
+
+.card-back .price {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: var(--rt-yellow);
 }
+
+p.price {margin-bottom: 0;}
 
 
 /* Clickable on mobile */
@@ -655,6 +663,24 @@ section {
   transform: rotateY(180deg);
 }
 
+
+
+/* Old price with strikethrough */
+.old-price {
+  text-decoration: line-through;
+  color: var(--rt-red);
+  font-size: 1rem;
+  margin-right: 0.3em;
+  opacity: 0.8;
+}
+
+/* Highlight the savings text */
+.savings {
+  font-size: 0.9rem;
+  color: var(--rt-green);
+  font-weight: bold;
+  margin-top: 0.3em;
+}
 
 
 /* ======================================================================================================================================
