@@ -892,23 +892,59 @@ nav.footer-links {
 ====================================================================================================================================== */
 
 
+
+/* -------------------------------------------
+TABLETS + SMALL LAPTOPS 
+-------------------------------------------- */
+
 @media (max-width: 1024px) {
+
+  /* Hero Banner */
+  .hero {
+    padding: 10em 1.5em 4em 1.5em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
 
   /* Highlight Section */
   .card {
     flex: 0 0 45%;
     max-width: 45%;
   }
+  
 }
 
 
 
-
+/* -------------------------------------------
+MOBILE PHONES
+-------------------------------------------- */
 @media (min-width: 768px) {
 
   /* Hero Banner */
   .hero {
-    padding-top: calc(6em + 150px); /* smaller header on mobile */
+    height: auto; /* Prevent text overflow */
+    padding: 8em 1em 3em 1em;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .hero-location {
+    font-size: 0.9em;
   }
 
   /* Highlight Section */
@@ -928,6 +964,30 @@ nav.footer-links {
     max-width: 100%;
   }
 
-
-
 }
+
+
+/* -------------------------------------------
+SMALL MOBILE PHONES
+-------------------------------------------- */
+@media (max-width: 480px) {
+
+
+  .hero {
+    padding: 6em 1em 2em 1em;
+  }
+
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.95em;
+  }
+
+  .hero-location {
+    font-size: 0.85em;
+  }
+}
+
+
