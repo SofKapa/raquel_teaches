@@ -180,7 +180,7 @@ section {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 
   /* Add top padding equal to header height */
-  padding: calc(6em + 216px) 1em 6em 1em; /* top right bottom left */
+  padding: 20rem 2rem 6rem 2rem; 
 }
 
 .hero-content {
@@ -900,8 +900,9 @@ TABLETS + SMALL LAPTOPS
 @media (max-width: 1024px) {
 
   /* Hero Banner */
+
   .hero {
-    padding: 10em 1.5em 4em 1.5em;
+    padding: 15rem 2rem 6rem 2rem;
   }
 
   .hero h1 {
@@ -930,7 +931,6 @@ MOBILE PHONES
   /* Hero Banner */
   .hero {
     height: auto; /* Prevent text overflow */
-    padding: 8em 1em 3em 1em;
   }
 
   .hero h1 {
@@ -967,14 +967,22 @@ MOBILE PHONES
 }
 
 
+
+
 /* -------------------------------------------
 SMALL MOBILE PHONES
 -------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width:576px) {
+
+
+  /* Buttons */
+  .btn-primary {
+    font-size: 1.2rem;
+  }
 
 
   .hero {
-    padding: 6em 1em 2em 1em;
+    padding: 17rem 2rem 6rem 2rem; 
   }
 
   .hero h1 {
@@ -988,6 +996,24 @@ SMALL MOBILE PHONES
   .hero-location {
     font-size: 0.85em;
   }
+
 }
+
+/* -------------------------------------------
+450px
+-------------------------------------------- */
+@media (max-width:450px) {
+
+
+  .hero {
+    padding: 25rem 2rem 10rem 2rem; 
+  }
+
+
+}
+
+
+
+  
 
 
