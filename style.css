@@ -95,10 +95,11 @@ section {
   color: var(--rt-light);
 }
 
+
+
 /* ======================================================================================================================================
    HEADER
 ====================================================================================================================================== */
-
 
 /* Glassmorphism effect for the header */
 .glass-header {
@@ -926,7 +927,14 @@ TABLETS + SMALL LAPTOPS
 /* -------------------------------------------
 MOBILE PHONES
 -------------------------------------------- */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
+  /* Header */
+  .nav-container a {
+    font-size: 1.3rem;
+  }
+
+  
 
   /* Hero Banner */
   .hero {
@@ -973,6 +981,17 @@ MOBILE PHONES
 SMALL MOBILE PHONES
 -------------------------------------------- */
 @media (max-width:576px) {
+
+  /* Header */
+
+  .nav-container a {
+    display: none; /* Hide all navigation links */
+    margin-right: 0.6rem;
+  }
+  
+  .nav-container .emphasis-button {
+    display: inline-block; /* Keep "Book Now" visible */
+  }
 
 
   /* Buttons */
