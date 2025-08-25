@@ -214,6 +214,84 @@ section {
    HIGHLIGHT SECTION
 ====================================================================================================================================== */
 
+
+.highlight-section {
+  background-color: var(--rt-yellow);
+  border-bottom: 2px solid var(--rt-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  max-width: 800px;
+  margin: 0.5em auto 3rem auto;
+  padding: 5%;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.6;
+  border-left: 6px solid var(--rt-light);
+  border-radius: 4px;
+  color: var(--rt-dark);
+  text-align: center;
+}
+
+/* ======================================================================================================
+   LANGUAGES CARDS: RESPONSIVE FLEXBOX LAYOUT
+====================================================================================================== */
+
+#service-cards {
+  display: flex;
+  flex-wrap: wrap;         /* Allow cards to wrap onto new lines */
+  gap: 2rem;               /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  padding: 2% 5%;
+  margin: 0 auto;
+  max-width: 1200px;       /* Optional: constrain width on large screens */
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 2rem); /* Ideal: 3 cards per row with gap taken into account */
+  max-width: 320px;
+  color: var(--rt-light);
+  border-radius: 12px;
+  border: 2px solid var(--rt-light);
+  padding: 1.5rem;
+  background: rgba(61, 64, 91, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--rt-light);
+}
+
+
+/* 
 .highlight-section {
   background-color: var(--rt-yellow);
   border-bottom: 2px solid var(--rt-light);
@@ -221,10 +299,9 @@ section {
 }
 
 
-/* Attention grabbing headline spacing */
 .highlight {
   max-width: 800px;
-  margin: 0.5em auto 3rem auto; /* add bottom margin for space before cards */
+  margin: 0.5em auto 3rem auto; 
   margin-bottom: 1rem;
   padding: 5%;
   font-size: 1.5em;
@@ -237,39 +314,37 @@ section {
 }
 
 
-/* Languages Cards */
 .card {
   color: var(--rt-light);
   border-radius: 12px;
   border: 2px solid var(--rt-light);
   padding: 1.5rem;
 
-  background: rgba(61, 64, 91, 0.6); /* 60% opacity of --rt-dark */
+  background: rgba(61, 64, 91, 0.6);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
 
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  flex: 0 0 28%; /* fixed width for all cards */
-  max-width: 320px; /* keeps cards uniform */
+  flex: 0 0 28%;
+  max-width: 320px; 
   display: flex;
-  flex-direction: column; /* so content stacks */
+  flex-direction: column; 
 }
 
 #service-cards {
-  display: flex;          /* keep all cards in a row */
-  gap: 2rem;              /* space between cards */
+  display: flex;          
+  gap: 2rem;             
   justify-content: center;
-  flex-wrap: nowrap;      /* no wrapping */
-  overflow-x: auto;       /* optional: allow horizontal scroll on very small screens */
-  padding: 5%;
+  flex-wrap: nowrap;      
+  overflow-x: auto;       
 }
 
 .card h3 {
-  display: flex;          /* icon + text inline */
-  align-items: center;    /* vertical centering */
-  justify-content: center; /* center in card */
-  gap: 0.5rem;            /* space between icon and text */
+  display: flex;          
+  align-items: center;   
+  justify-content: center; 
+  gap: 0.5rem;         
 }
 
 .flag-icon {
@@ -289,7 +364,7 @@ section {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-}
+} */
 
 
 
@@ -976,8 +1051,7 @@ MOBILE PHONES
 
   /* Highlight Section */
   .card {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 1 1 calc(50% - 2rem);
   }
 
   /* Services Section */
@@ -1032,6 +1106,11 @@ SMALL MOBILE PHONES
 
   .btn-primary {
     font-size: 1.2rem;
+  }
+
+  /* Highlight section  */
+  .card {
+    flex: 1 1 100%;
   }
 
 
