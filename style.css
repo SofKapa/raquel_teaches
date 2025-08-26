@@ -8,10 +8,20 @@
     box-sizing: border-box;
 }
 
+/* Make all elements include padding/border in width calculation */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body { 
   font-family: 'Aboreto', sans-serif; 
   line-height: 1.6; 
   color: var(--rt-dark); 
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -916,6 +926,10 @@ nav.footer-links {
 
 
 
+
+
+
+
 /* ======================================================================================================================================
    RESPONSIVENESS
 ====================================================================================================================================== */
@@ -1025,9 +1039,6 @@ MOBILE PHONES
   }
 
   /* Highlight Section */
-  body {
-    overflow-x: visible; /* Allow horizontal scrolling again */
-  }
 
   #service-cards {
     display: flex !important;
@@ -1130,15 +1141,18 @@ SMALL MOBILE PHONES
 /* -------------------------------------------
 450px
 -------------------------------------------- */
-@media (max-width:450px) {
 
-
+@media (max-width: 450px) {
   .hero {
-    padding: 15rem 2rem 4rem 2rem;
+    padding: 8rem 1rem 4rem 1rem;
   }
 
-
+  .card-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
+
 
 
 
