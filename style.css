@@ -238,7 +238,6 @@ section {
    LANGUAGES CARDS: RESPONSIVE FLEXBOX LAYOUT
 ====================================================================================================== */
 
-/* Base styles for the grid */
 #service-cards {
   display: flex;
   gap: 1rem;
@@ -248,38 +247,45 @@ section {
   padding: 2rem 5rem;
 }
 
-/* Card styles */
 #service-cards .card {
-  flex: 1;
-  aspect-ratio: 1 / 1; 
-  background: rgba(61, 64, 91, 0.6);
+  flex: 1 1 0;
+  aspect-ratio: 1 / 1;      /* perfect squares */
+  min-width: 250px;
+  max-width: 300px;
+  background: rgba(61,64,91,0.6);
   padding: 1rem;
   border: 2px solid var(--rt-light);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-width: 250px; /* Prevents collapsing too small */
-  max-width: 300px;
 }
 
+/* Prevent your global .col-* rules from overriding sizing here */
+#service-cards .col-4,
+#service-cards .col-6 {
+  flex: 0 0 auto !important;
+  width: var(--card-size) !important;
+}
+
+
+/* Title + flag alignment */
 #service-cards .card h3 {
-  margin-bottom: 0.5rem;
+  margin: 0 0 .5rem;
   color: var(--rt-light);
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center; /* Vertically align the flag and text */
-  gap: 8px; /* Add space between the flag and text */
+  gap: 8px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
+
 #service-cards .card .flag-icon {
   width: 24px;
-  height: auto;
-  margin-right: 8px;
+  height: 24px;
+  object-fit: contain;
 }
 
 #service-cards .card h3 .flag-icon {
@@ -288,13 +294,17 @@ section {
   object-fit: contain;
 }
 
-.card p {
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.5;
+/* Tame paragraph so it never stretches the square */
+#service-cards .card p {
   color: var(--rt-light);
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  /* display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;   */
+  overflow: hidden;
 }
-
 
 /* Hover effect for cards */
 .card:hover {
@@ -946,11 +956,11 @@ TABLETS + SMALL LAPTOPS
   /* Highlight Section */
 
   #service-cards .card {
-    max-width: 220px;
     min-width: 220px;
+    max-width: 220px;
     aspect-ratio: 1 / 1;
   }
-  
+
 }
 
 
@@ -992,20 +1002,40 @@ MOBILE PHONES
   }
 
   /* Highlight Section */
+  body {
+    overflow-x: visible; /* Allow horizontal scrolling again */
+  }
+
   #service-cards {
+    display: flex !important;
+    flex-wrap: nowrap;
     overflow-x: auto;
+    gap: 1rem;
+    padding: 0 1rem;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 0 1rem; /* breathing room on edges */
+    justify-content: flex-start;
   }
 
   #service-cards .card {
     flex: 0 0 auto;
-    width: 180px; /* smaller size for better visibility */
-    min-width: 180px;
-    max-width: 180px;
-    scroll-snap-align: center;
+    width: 70%;        /* or fixed px like 180px */
+    height: auto;
+    scroll-snap-align: start;
+    aspect-ratio: auto; /* allow height to grow for text */
   }
+
+  #service-cards .card p {
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+
+  /* Optional: hide scrollbar for cleaner look */
+  #service-cards::-webkit-scrollbar {
+    display: none;
+  }
+
 
   /* Services Section */
   .col-6 {
