@@ -316,8 +316,6 @@ section {
 
 
 
-
-
 /* ======================================================================================================================================
    SERVICES
 ====================================================================================================================================== */
@@ -348,12 +346,16 @@ section {
   padding: 2rem;
 }
 
+p.service-note {
+  margin-bottom: 0;
+}
+
 .service-intro {
   font-family: 'Jost', sans-serif;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -377,7 +379,7 @@ section {
   transition: all 0.2s ease;
   text-align: center;
   width: 100%;
-  max-width: 300px; /* ensures uniform width */
+  max-width: 600px; /* ensures uniform width */
 }
 
 .lesson-options button:hover {
@@ -953,6 +955,7 @@ TABLETS + SMALL LAPTOPS
     margin-top: 3rem;
   }
 
+
   /* Highlight Section */
 
   #service-cards .card {
@@ -960,6 +963,26 @@ TABLETS + SMALL LAPTOPS
     max-width: 220px;
     aspect-ratio: 1 / 1;
   }
+
+
+  /* Services Section */
+
+  .services h2 {
+    margin-bottom: 0;
+  }
+
+  p.service-note {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+  }
+
+  .service-intro {
+    margin-bottom: 3rem;
+  }
+
+
+
 
 }
 
@@ -1089,6 +1112,16 @@ SMALL MOBILE PHONES
 
   .btn-primary {
     font-size: 1.2rem;
+  }
+
+  /* Services */
+  .services-grid {
+    padding: 2rem 2rem;
+  }
+
+  .service-note {
+    padding: 0rem;
+    padding-top: 2rem;
   }
 
 
