@@ -156,6 +156,7 @@ section {
 }
 
 .emphasis-button {
+  text-align: center;
   padding: 0.5rem 1rem;
   border-radius: 40px;
   border: 2px solid currentColor;
@@ -1151,6 +1152,23 @@ SMALL MOBILE PHONES
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+}
+
+
+/* -------------------------------------------
+320px
+-------------------------------------------- */
+
+@media (max-width: 320px) {
+  .nav-container .emphasis-button {
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0;
+      margin-right: 0.5rem;
+  }
+
+
 }
 
 
