@@ -24,36 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // TESTIMONIALS
 
-  const prevBtn = document.querySelector(".scroll-btn.prev");
-  const nextBtn = document.querySelector(".scroll-btn.next");
-  const wrapper = document.querySelector(".testimonial-wrapper");
-  const cards = wrapper.querySelectorAll(".testimonial-card");
 
-  // Get exact width of one card including any margin
-  function getCardWidth(card) {
-    const style = window.getComputedStyle(card);
-    const margin = parseInt(style.marginLeft) + parseInt(style.marginRight);
-    return card.offsetWidth + margin;
-  }
+  const swiper = new Swiper('.swiper', {
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    slidesPerView: 1,        // Show one slide only
+    centeredSlides: false,   // No centering effects needed
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: { navigation: false },
+      769: { navigation: true }
+    }
+  });
 
-  const cardWidth = getCardWidth(cards[0]);
-  let index = 0;
 
-  function showCard(i) {
-    if (i < 0) i = 0;
-    if (i >= cards.length) i = cards.length -1;
-    index = i;
-    wrapper.scrollTo({
-      left: index * cardWidth,
-      behavior: 'smooth'
-    });
-  }
-
-  nextBtn.addEventListener('click', () => showCard(index + 1));
-  prevBtn.addEventListener('click', () => showCard(index - 1));
-
-  // Initialize first card
-  showCard(0);
 
 
   // PACKAGE CARDS

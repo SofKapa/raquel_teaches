@@ -403,6 +403,7 @@ p.service-note {
 /* ======================================================================================================================================
    TESTIMONIALS
 ====================================================================================================================================== */
+
 .testimonials {
   padding: 4rem 2%;
   background: var(--rt-light);
@@ -415,71 +416,95 @@ p.service-note {
   font-weight: 600;
 }
 
-/* Carousel */
-.testimonial-container {
+
+/* ✅ one full-width slide at a time */
+.swiper {
+  width: 100%;
+  overflow: hidden;          /* ensure no peeking */
   position: relative;
-  display: flex;
+}
+
+.swiper-wrapper {
+  align-items: stretch;      /* keep slides same height if you like */
+}
+
+.swiper-slide {
+  width: 100% !important;    /* fill the viewport width */
+  max-width: none !important;
+  flex-shrink: 0;            /* don’t compress */
+  display: flex;             /* center inner content block */
   justify-content: center;
-  align-items: center;
 }
 
-.testimonial-wrapper {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px; /* single card width */
-  scroll-snap-type: x mandatory;
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--rt-yellow);   /* your brand color */
+  --swiper-navigation-size: 40px;
 }
 
-.testimonial-card {
-  flex: 0 0 100%;  /* one card at a time */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
+/* Shift both navigation arrows inward */
+.swiper-button-prev {
+  left: 5%;                 /* Adjust the percentage as needed */
+  right: auto;               /* Override any default value */
+}
+.swiper-button-next {
+  right: 5%;                /* Mirror value for consistency */
+  left: auto;
 }
 
+
+
+/* card/text block inside each slide */
 .card-content {
+  max-width: 820px;     /* tweak to taste */
   width: 100%;
-  padding: 2rem 2rem 2rem 3rem;
-  /* border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1); */
-  position: relative;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  position: relative;   /* your quote icons rely on this */
 }
 
-/* SVG Quote Icons */
+
 .quote-icon img {
   width: 40px;       /* change to desired width */
   height: 40px;      /* change to desired height */
   object-fit: contain; /* keeps the SVG proportions */
 }
 
-
-/* Quote icons */
 .quote-icon {
-  position: absolute;
-  top: 0;
-  left: 1rem;
   width: 40px;
   height: 40px;
   opacity: 0.2;
 }
 
-.quote-icon.right {
-  left: auto;
-  right: 1rem;
-  bottom: 0;
-  top: auto;
+/* Left quote - top left of card */
+.quote-icon.left {
+  position: absolute;
+  top: 0;
+  left: 3rem;
 }
+
+/* Testimonial wrapper */
+.testimonial-wrapper {
+  position: relative; /* right quote positions relative to this */
+  display: block;     makes container full width
+}
+
+/* Right quote - top right of testimonial text */
+.quote-icon.right {
+  position: absolute;
+  right: -1.5rem;  /* adjust distance from text */
+  bottom: 0;           /* aligns with top of text */
+}
+
 
 .testimonial-text {
   font-size: 1.4rem;
   font-style: italic;
   line-height: 1.4;
-  margin: 2rem 0 1rem;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
-/* Author below card */
 .author {
   margin-top: 1rem;
   text-align: center;
@@ -487,42 +512,6 @@ p.service-note {
   font-size: 1rem;
 }
 
-/* Buttons */
-.scroll-btn img {
-  width: 3rem;   /* adjust size */
-  height: 3rem;
-  display: block;
-  margin: auto;    /* center inside button */
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
-  z-index: 2;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.scroll-btn:hover {
-  opacity: 1;
-}
-
-.scroll-btn.prev {
-  left: 8rem;
-  background-color: transparent;
-}
-
-.scroll-btn.next {
-  right: 8rem;
-  background-color: transparent;
-}
 
 
 /* ======================================================================================================================================
@@ -997,14 +986,11 @@ TABLETS + SMALL LAPTOPS
   }
 
   /* Testimonials */
-
-  .scroll-btn.prev {
-    left: 2rem;
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
   }
 
-  .scroll-btn.next {
-    right: 2rem;
-  }
 
 
 }
@@ -1091,12 +1077,6 @@ MOBILE PHONES
     max-width: 100%;
   }
 
-    /* Testimonials */
-
-  .scroll-btn.prev,
-  .scroll-btn.next {
-    display: none;
-  }
 
 
 }
