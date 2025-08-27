@@ -23,25 +23,35 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
   // TESTIMONIALS
-
-
   const swiper = new Swiper('.swiper', {
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
     },
     loop: true,
-    slidesPerView: 1,        // Show one slide only
-    centeredSlides: false,   // No centering effects needed
+    slidesPerView: 1,
+    centeredSlides: false,
+
+    // always define navigation here
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
+
     breakpoints: {
-      0: { navigation: false },
-      769: { navigation: true }
+      0: {
+        navigation: false,   // arrows disappear
+        // touch/swipe enabled by default on mobile
+      },
+      769: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        } // arrows appear
+      }
     }
   });
+
 
 
 
