@@ -515,12 +515,12 @@ p.service-note {
 }
 
 .scroll-btn.prev {
-  left: 10rem;
+  left: 8rem;
   background-color: transparent;
 }
 
 .scroll-btn.next {
-  right: 10rem;
+  right: 8rem;
   background-color: transparent;
 }
 
@@ -996,7 +996,15 @@ TABLETS + SMALL LAPTOPS
     margin-bottom: 3rem;
   }
 
+  /* Testimonials */
 
+  .scroll-btn.prev {
+    left: 2rem;
+  }
+
+  .scroll-btn.next {
+    right: 2rem;
+  }
 
 
 }
@@ -1082,6 +1090,14 @@ MOBILE PHONES
   .lesson-options button {
     max-width: 100%;
   }
+
+    /* Testimonials */
+
+  .scroll-btn.prev,
+  .scroll-btn.next {
+    display: none;
+  }
+
 
 }
 
