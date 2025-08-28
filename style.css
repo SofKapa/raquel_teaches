@@ -817,8 +817,8 @@ section.audience{
 #contact h2 {
   color: var(--rt-light);
   text-align: center;
+  padding:3rem;
   padding-top: 5rem;
-  padding-bottom: 3rem;
 }
 
 .form-section {
@@ -1000,8 +1000,28 @@ TABLETS + SMALL LAPTOPS
     display: none !important;
   }
 
-  
+  /* Contact */
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
 
+  #contact .contact-image {
+    order: -1; /* Moves image above form */
+    min-height: 900px; /* optional: adjust height for responsiveness */
+    border-right: none;
+    border-bottom: 2px solid var(--rt-light);
+  }
+
+  #contact .form-section {
+    border-right: none;
+  }
+
+  .contact-form {
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 5rem;
+  }
 
 
 }
@@ -1111,6 +1131,43 @@ MOBILE PHONES
     border-right: none; /* optional: remove border in stacked layout */
   }
 
+  /* Contact */
+  .contact-form {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #contact .btn-primary {
+      margin-top: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem; /* adds space between stacked elements */
+  }
+
+  .footer-text {
+    font-size: 1rem;
+    padding-bottom:1.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem; /* space between Instagram and email */
+  }
+
+  .footer-links span {
+    display: none; /* hides the "|" separator for a cleaner vertical layout */
+  }
+
+
 
 }
 
@@ -1171,6 +1228,17 @@ SMALL MOBILE PHONES
     padding-bottom: 0rem;
   }
 
+  /* Contact */
+  #contact .contact-image {
+    min-height: 600px;
+  }
+
+  .contact-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+
 
 }
 
@@ -1194,6 +1262,12 @@ SMALL MOBILE PHONES
   /* Packages */
   .package-note-bottom span {
     display: block;
+  }
+
+  /* About */
+  #about-text {
+    padding-left:3rem;
+    padding-right:3rem;
   }
 
 }
