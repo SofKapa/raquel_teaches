@@ -405,9 +405,11 @@ p.service-note {
 ====================================================================================================================================== */
 
 .testimonials {
-  padding: 4rem 2%;
   background: var(--rt-light);
   text-align: center;
+  padding: 0;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .testimonials h2 {
@@ -492,7 +494,7 @@ p.service-note {
 /* Right quote - top right of testimonial text */
 .quote-icon.right {
   position: absolute;
-  right: -1.5rem;  /* adjust distance from text */
+  right: 0rem;  /* adjust distance from text */
   bottom: 0;           /* aligns with top of text */
 }
 
@@ -991,6 +993,8 @@ TABLETS + SMALL LAPTOPS
     display: none !important;
   }
 
+  
+
 
 
 }
@@ -1132,6 +1136,12 @@ SMALL MOBILE PHONES
     padding-top: 2rem;
   }
 
+  /* Testimonials */
+  .testimonials {
+    padding-top:4rem;
+    padding-bottom: 0rem;
+  }
+
 
 }
 
@@ -1157,12 +1167,30 @@ SMALL MOBILE PHONES
 -------------------------------------------- */
 
 @media (max-width: 320px) {
+
+  /* Header */
   .nav-container .emphasis-button {
       display: inline-block;
       font-size: 1rem;
       margin: 0;
       margin-right: 0.5rem;
   }
+
+  /* Testimonials */
+  .testimonials h2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .quote-icon.left {
+    left: 1.3rem;
+  }
+
+  .testimonials {
+    padding-bottom: 1rem;
+  }
+
+  div.card-content {padding-bottom: 0;}
 
 
 }
