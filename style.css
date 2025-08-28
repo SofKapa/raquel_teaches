@@ -681,12 +681,6 @@ section.packages {
   color: var(--rt-light);
 }
 
-/* .card-back .price {
-  font-weight: bold;
-  font-size: 1.25em;
-  color: var(--rt-light);
-  margin-bottom: 0rem;
-} */
 
 .card-back .price {
   font-weight: bold;
@@ -727,6 +721,11 @@ p.price {margin-bottom: 0;}
 ====================================================================================================================================== */
 
 /* WHO IS THIS FOR */
+
+section.audience{
+  padding-top: 5rem;
+}
+
 .audience {
   background: var(--rt-yellow);
   padding: 4em 1em;
@@ -795,7 +794,7 @@ p.price {margin-bottom: 0;}
 }
 
 .audience-item.active .audience-content {
-  max-height: 200px; /* adjust if your text is longer */
+  max-height: none;
   padding: 1em;
 }
 
