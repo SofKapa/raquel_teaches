@@ -334,6 +334,7 @@ section {
 .services {
   background-color: var(--rt-dark);
   padding: 4rem 2%;
+  padding-top: 5rem;
   color: var(--rt-light);
   border-bottom: 2px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -1081,6 +1082,11 @@ MOBILE PHONES
     max-width: 100%;
   }
 
+  /* About */
+  .about-image {
+    min-height: 100vh; /* or any height you want */
+    border-right: none; /* optional: remove border in stacked layout */
+  }
 
 
 }
@@ -1191,6 +1197,16 @@ SMALL MOBILE PHONES
   }
 
   div.card-content {padding-bottom: 0;}
+
+  /* About */
+  #about-text {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  #about-text p{
+    text-align: center;
+  }
 
 
 }
