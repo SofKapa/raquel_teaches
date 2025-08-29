@@ -532,7 +532,7 @@ p.service-note {
 
 /* First div with background image */
 .about-image {
-  background-image: url("/assets/images/placeholder-about-me-photo.jpg");
+  background-image: url("/assets/images/about_raquel-teaches.jpg");
   background-size: cover;
   background-position: 50% 35%;
   min-height: 100%;
@@ -856,7 +856,7 @@ section.audience{
 
 /* Contact Image */
 .contact-image {
-  background-image: url("/assets/images/placeholder-about-me-photo.jpg");
+  background-image: url("/assets/images/contact_raquel-teaches.jpg");
   background-size: cover;
   background-position: 50% 35%;
   min-height: 100%;
