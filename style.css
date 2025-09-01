@@ -36,7 +36,7 @@ p {
   margin-bottom: 1em; }
 
 a { 
-  color: var(--rt-green); 
+  color: var(--rt-); 
   text-decoration: none; 
 }
 
@@ -60,9 +60,10 @@ a:hover { text-decoration: underline; }
   /* Brand palette */
   --rt-light: #F4F1DE;   /* Light, airy base */
   --rt-dark: #3D405B;    /* Deep, grounding tone */
-  --rt-red: #E07A5F;     /* Warm accent */
-  --rt-green: #81B29A;   /* Calm, balanced highlight */
+  --rt-maroon: #8C5E47;     /* Warm accent */
+  --rt-pink: #A87676;   /* Calm, balanced highlight */
   --rt-yellow: #F2CC8F;  /* Vibrant, attention-grabbing highlight */
+
 }
 
 /* ======================================================================================================================================
@@ -87,7 +88,7 @@ a:hover { text-decoration: underline; }
   cursor: pointer;
 }
 .btn-primary:hover { 
-  background: var(--rt-green);
+  background: var(--rt-pink);
   color: var(--rt-light);
   text-decoration: none; }
 
@@ -406,7 +407,8 @@ p.service-note {
 ====================================================================================================================================== */
 
 .testimonials {
-  background: var(--rt-light);
+  background: var(--rt-yellow);
+  border-bottom: 2px solid var(--rt-light);
   text-align: center;
   padding: 0;
   padding-top: 5rem;
@@ -414,7 +416,7 @@ p.service-note {
 }
 
 .testimonials h2 {
-  color: var(--rt-dark);
+  color: var(--rt-maroon);
   margin-bottom: 3rem;
   font-weight: 600;
 }
@@ -441,7 +443,7 @@ p.service-note {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--rt-yellow);   /* your brand color */
+  color: var(--rt-light);   /* your brand color */
   --swiper-navigation-size: 40px;
 }
 
@@ -509,6 +511,7 @@ p.service-note {
 }
 
 .author {
+  color: var(--rt-maroon);
   margin-top: 1rem;
   text-align: center;
   font-weight: bold;
@@ -524,7 +527,7 @@ p.service-note {
 
 .about {
   padding: 0rem;
-  background: var(--rt-yellow);
+  background: var(--rt-light);
   border-bottom: 2px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   min-height: 80vh;
@@ -547,7 +550,7 @@ p.service-note {
 .about-text h2 {
   text-align: center;
   padding-bottom: 2rem;
-  color: var(--rt-light);
+  color: var(--rt-maroon);
 }
 
 .about-text p {
@@ -555,7 +558,7 @@ p.service-note {
   line-height: 1.6;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--rt-dark);
+  color: var(--rt-maroon);
 }
 
 
@@ -673,7 +676,7 @@ section.packages {
 .card-back li::before {
   content: "✔";
   margin-right: 0.5em;
-  color: var(--rt-green);
+  color: var(--rt-pink);
 }
 
 .card-back .duration {
@@ -701,7 +704,7 @@ p.price {margin-bottom: 0;}
 /* Old price with strikethrough */
 .old-price {
   text-decoration: line-through;
-  color: var(--rt-red);
+  color: var(--rt-yellow);
   font-size: 1rem;
   margin-right: 0.3em;
   opacity: 0.8;
@@ -710,7 +713,7 @@ p.price {margin-bottom: 0;}
 /* Highlight the savings text */
 .savings {
   font-size: 0.9rem;
-  color: var(--rt-green);
+  color: var(--rt-pink);
   font-weight: bold;
   margin-top: 0.3em;
 }
@@ -747,7 +750,7 @@ section.audience{
 
 .audience-item {
   background: var(--rt-light);
-  border: 2px solid var(--rt-green);
+  border: 2px solid var(--rt-pink);
   border-radius: 8px;
   margin-bottom: 1em;
   overflow: hidden;
@@ -772,7 +775,7 @@ section.audience{
 
 .audience-toggle .icon {
   font-size: 1.5em;
-  color: var(--rt-green);
+  color: var(--rt-pink);
   transition: transform 0.3s ease;
 }
 
@@ -809,7 +812,7 @@ section.audience{
 
 #contact {
   padding:0;
-  background-color: var(--rt-dark);
+  background-color: var(--rt-maroon);
   border-bottom: 2px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
