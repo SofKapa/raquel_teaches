@@ -188,7 +188,7 @@ section {
   /* Background image with semi-transparent overlay */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/assets/images/placeholder_student-doing-exercises.jpg') center center / cover no-repeat;
+    url('/assets/images/exercises_raquel-teaches.jpeg') center center / cover no-repeat;
   color: white;
   border-bottom: 2px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
