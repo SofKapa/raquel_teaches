@@ -385,10 +385,10 @@ p.service-note {
   font-weight: 500;
   padding: 0.8em 1.5em;
   border-radius: 50px;
-  border: 2px solid var(--rt-light);
+  border: 2px solid var(--rt-yellow);
   cursor: pointer;
-  background: var(--rt-yellow);
-  color: #333;
+  background: var(--rt-light);
+  color: var(--rt-dark);
   transition: all 0.2s ease;
   text-align: center;
   width: 100%;
@@ -396,7 +396,8 @@ p.service-note {
 }
 
 .lesson-options button:hover {
-  background: var(--rt-light);
+  background: var(--rt-pink);
+  color: var(--rt-light);
   transform: translateY(-2px);
 }
 
