@@ -1367,11 +1367,19 @@ SMALL MOBILE PHONES
   }
 
   /* Hero */
-
   div.hero-content h1 {
     font-size: 2rem;
   }
 
+  /* Highlight */
+  .highlight {
+    margin: 0.5em 0rem 3rem 0rem;
+  }
+
+  /* Services */
+  .services-grid {
+    padding: 2rem 1rem;
+  }
 
   /* Testimonials */
   .testimonials h2 {
@@ -1390,14 +1398,50 @@ SMALL MOBILE PHONES
   div.card-content {padding-bottom: 0;}
 
   /* About */
+  .about-image {
+    min-height: 60vh;
+  }
+
   #about-text {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #about-text p{
     text-align: center;
   }
+
+  /* Packages */
+  .package-note-top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .package-note-bottom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  div.package-cards {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Audience */
+  .audience {
+    padding: 4rem 2rem;
+  }
+
+  /* Contact */
+  #contact .contact-image {
+    min-height: 400px;
+  }
+
+  .contact-form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
 
 
 }
