@@ -1432,6 +1432,11 @@ SMALL MOBILE PHONES
     padding: 4rem 2rem;
   }
 
+  .audience-toggle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
   /* Contact */
   #contact .contact-image {
     min-height: 400px;
