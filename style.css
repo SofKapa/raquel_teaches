@@ -998,6 +998,17 @@ TABLETS + SMALL LAPTOPS
     margin-bottom: 3rem;
   }
 
+  .lesson-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers buttons horizontally */
+  }
+
+  .lesson-options button {
+    width: 100%;
+    max-width: 600px; /* keeps uniform width */
+  }
+
   /* Testimonials */
   .swiper-button-prev,
   .swiper-button-next {
