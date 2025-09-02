@@ -241,6 +241,7 @@ section {
   font-weight: 500;
   line-height: 1.6;
   border-left: 6px solid var(--rt-light);
+  border-right: 6px solid var(--rt-light);
   border-radius: 4px;
   color: var(--rt-dark);
   text-align: center;
@@ -1079,6 +1080,12 @@ TABLETS + SMALL LAPTOPS
     margin-bottom: 3rem;
   }
 
+  /* Highlight */
+  .highlight {
+    margin: 0.5em 2rem 3rem 2rem;
+  }
+
+  /* Packages */
   .package-card {
     width: 90%; /* take most of the screen width */
     max-width: 300px; /* optional, keeps consistent sizing */
@@ -1125,6 +1132,10 @@ MOBILE PHONES
 
   /* Highlight Section */
 
+  .highlight-section {
+    padding: 4em 2em;
+  }
+
   #service-cards {
     display: flex !important;
     flex-wrap: nowrap;
@@ -1167,6 +1178,10 @@ MOBILE PHONES
     max-width: 100%;
   }
 
+  /* Audience */
+  .audience {
+    padding: 4rem 5rem;
+  }
 
   /* Contact */
   .contact-form {
@@ -1203,6 +1218,13 @@ MOBILE PHONES
   .footer-links span {
     display: none; /* hides the "|" separator for a cleaner vertical layout */
   }
+
+  .footer-links img {
+      width: 40px;
+      height: 40px;
+  }
+
+
 
 
 
@@ -1249,6 +1271,8 @@ SMALL MOBILE PHONES
     font-size: 1.2rem;
   }
 
+
+
   /* Services */
   .services-grid {
     padding: 2rem 2rem;
@@ -1267,12 +1291,12 @@ SMALL MOBILE PHONES
 
   /* Contact */
   #contact .contact-image {
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .contact-form {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
 
@@ -1296,16 +1320,34 @@ SMALL MOBILE PHONES
     padding-right: 1rem;
   }
 
-  /* Packages */
-  .package-note-bottom span {
-    display: block;
-  }
-
   /* About */
   #about-text {
     padding-left:3rem;
     padding-right:3rem;
   }
+
+  /* Packages */
+  section.packages {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .package-note-bottom span {
+    display: block;
+  }
+
+  /* Audience */
+  .audience {
+    padding: 4rem 3rem;
+  }
+
+  /* Contact */
+  .contact-form {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+
 
 }
 
