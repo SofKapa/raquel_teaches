@@ -956,7 +956,7 @@ TABLETS + SMALL LAPTOPS
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
   }
 
@@ -1022,10 +1022,16 @@ TABLETS + SMALL LAPTOPS
     background-position: 50% 0%;
     min-height: 80vh; /* or any height you want */
     border-right: none; /* optional: remove border in stacked layout */
+    border-bottom: 2px solid var(--rt-maroon);
   }
 
   #about-text {
     padding: 5rem;
+  }
+
+  /* Packages */
+  .packages {
+    border-top: 2px solid var(--rt-maroon);
   }
 
   /* Contact */
@@ -1060,9 +1066,17 @@ TABLETS + SMALL LAPTOPS
 -------------------------------------------- */
 
 @media (max-width: 850px) {
+
+
+  /* Hero */
   .package-cards {
     flex-direction: column;
     align-items: center; /* centers each card in the row */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 
   .package-card {
