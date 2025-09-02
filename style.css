@@ -531,21 +531,21 @@ p.service-note {
   background: var(--rt-light);
   border-bottom: 2px solid var(--rt-light);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 /* First div with background image */
 .about-image {
   background-image: url("/assets/images/about_raquel-teaches.jpg");
   background-size: cover;
-  background-position: 50% 35%;
+  background-position: 50% 40%;
   min-height: 100%;
   border-right: 2px solid var(--rt-light);
 }
 
 /* Second div with text */
 #about-text {
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .about-text h2 {
@@ -1017,6 +1017,17 @@ TABLETS + SMALL LAPTOPS
     display: none !important;
   }
 
+  /* About */
+  .about-image {
+    background-position: 50% 0%;
+    min-height: 80vh; /* or any height you want */
+    border-right: none; /* optional: remove border in stacked layout */
+  }
+
+  #about-text {
+    padding: 5rem;
+  }
+
   /* Contact */
   #contact {
     display: flex;
@@ -1142,11 +1153,6 @@ MOBILE PHONES
     max-width: 100%;
   }
 
-  /* About */
-  .about-image {
-    min-height: 100vh; /* or any height you want */
-    border-right: none; /* optional: remove border in stacked layout */
-  }
 
   /* Contact */
   .contact-form {
