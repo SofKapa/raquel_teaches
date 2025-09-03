@@ -934,18 +934,21 @@ nav.footer-links {
    FORM SUBMISSION - THANK YOU PAGE
 ====================================================================================================================================== */
 
+
 .thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
   background-color: var(--rt-dark);
   color: var(--rt-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+  width: 100vw;
+  min-height: 100vh;
   padding: 2rem;
-  text-align: center;
 }
 
-.thank-you-container {max-width: 600px;}
+.thank-you-container {max-width: 500px;}
 
 .thank-you-container h1 {
   font-size: 2rem;
@@ -957,21 +960,6 @@ nav.footer-links {
   margin-bottom: 2rem;
 }
 
-.thank-you-container a {
-  display: inline-block; 
-  background-color:var(--rt-yellow);
-  color: var(--rt-dark);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.thank-you-container a:hover {
-  background-color: var(--rt-pink);
-  color: var(--rt-light);
-}
 
 
 
