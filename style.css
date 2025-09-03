@@ -958,6 +958,7 @@ TABLETS + SMALL LAPTOPS
 
   .hero h1 {
     font-size: 2.5rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
@@ -967,6 +968,7 @@ TABLETS + SMALL LAPTOPS
 
   p.hero-location {
     font-size: 2rem;
+    margin-bottom: 0rem;
   }
 
   .btn-primary {
@@ -1124,6 +1126,8 @@ MOBILE PHONES
   .hero-location {
     font-size: 0.9em;
   }
+
+  p.hero-location {margin-bottom: 1rem;}
 
   .btn-primary {
     padding: 0.5em 1.5em;
@@ -1366,9 +1370,16 @@ SMALL MOBILE PHONES
       margin-right: 0.5rem;
   }
 
+  .btn-primary {margin-top: 1rem;}
+
   /* Hero */
   div.hero-content h1 {
     font-size: 2rem;
+  }
+
+  .hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   /* Highlight */
