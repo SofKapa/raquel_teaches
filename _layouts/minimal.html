@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+  <meta name="author" content="{{ page.author.name }}">
+
+  <!-- Open Graph / Twitter meta -->
+  <meta property="og:title" content="{{ page.meta.og.title }}">
+  <meta property="og:description" content="{{ page.meta.og.description }}">
+  <meta property="og:type" content="{{ page.meta.og.type }}">
+  <meta property="og:image" content="{{ page.meta.og.image }}">
+  <meta name="twitter:card" content="{{ page.meta.twitter.card }}">
+  <meta name="twitter:title" content="{{ page.meta.twitter.title }}">
+  <meta name="twitter:description" content="{{ page.meta.twitter.description }}">
+  <meta name="twitter:image" content="{{ page.meta.twitter.image }}">
+  <meta name="twitter:creator" content="{{ page.meta.twitter.creator }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/icons/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/icons/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/icons/favicon/site.webmanifest" />
+
+  <!-- Google Fonts | Aboreto & Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet - always last -->
+  <link rel="stylesheet" href="/style.css">
+
+
+</head>
+<body>
+
+  {{ content }}
+
+</body>
+</html>
