@@ -501,8 +501,13 @@ nav-search: true
 <section id="contact" class="contact grid">
 
   <div class="col-6_md-12 form-section">
+
+
     <h2>Ready to Begin?</h2>
+
+
     <form action="https://formspree.io/f/mjkepbyp" method="POST" class="contact-form">
+
       <label for="name">Name*</label>
       <input type="text" id="name" name="name" required>
       
@@ -526,7 +531,14 @@ nav-search: true
       <textarea id="message" name="message" rows="4"></textarea>
       
       <button type="submit" class="btn-primary">Send & Book a Lesson</button>
+
+      <!-- Hidden field for redirect -->
+      <input type="hidden" name="_redirect" value="https://raquelteaches.com/thank-you.html">
+
+      <button type="submit" class="btn-primary">Send & Book a Lesson</button>
+
     </form>
+
   </div>
 
   <div class="col-6_md-12 contact-image">
