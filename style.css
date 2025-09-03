@@ -420,6 +420,8 @@ p.service-note {
   color: var(--rt-maroon);
   margin-bottom: 3rem;
   font-weight: 600;
+  padding: 2rem;
+  padding-top: 0rem;
 }
 
 
