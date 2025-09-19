@@ -171,7 +171,7 @@ section {
 /* Hover states for buttons */
 .emphasis-button:hover {
   background: var(--rt-yellow);
-  color: var(--rt-dark);
+  color: var(--rt-pink);
 }
 
 
@@ -694,11 +694,16 @@ section.packages {
 
 .card-back .price {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: center;
+  font-style: italic;
   color: var(--rt-yellow);
 }
 
-p.price {margin-bottom: 0;}
+p.price {
+  margin-bottom: 0;
+}
 
 
 /* Clickable on mobile */
@@ -710,9 +715,9 @@ p.price {margin-bottom: 0;}
 
 /* Old price with strikethrough */
 .old-price {
-  text-decoration: line-through;
-  color: var(--rt-yellow);
-  font-size: 1rem;
+  text-decoration: line-through 2px solid var(--rt-yellow);
+  color: var(--rt-dark);
+  font-size: 1.2rem;
   margin-right: 0.3em;
   opacity: 0.8;
 }
