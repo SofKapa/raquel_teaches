@@ -2,6 +2,29 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
+  // NAV LINKS
+  document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // prevent default jump
+
+      // Use data-scroll-target if present, otherwise fallback to href
+      const targetSelector = this.dataset.scrollTarget || this.getAttribute('href');
+      const targetEl = document.querySelector(targetSelector);
+      if (!targetEl) return;
+
+      // Get current header height
+      const headerHeight = document.querySelector('.glass-header').offsetHeight;
+
+      // Calculate scroll position
+      const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+      // Scroll smoothly
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    });
+  });
+
+
+
   // AUDIENCE LIST
 
   // Select all audience items
@@ -51,8 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-
-
 
 
 
