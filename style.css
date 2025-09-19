@@ -871,7 +871,12 @@ section.audience{
   font-weight: bold; 
 }
 
-
+#contact-form .btn-primary {
+  max-width: 500px;   /* adjust to your liking */
+  margin: 1rem auto 0; /* centers it */
+  display: block;      /* needed for margin auto to work */
+  justify-self: center;
+}
 
 
 /* Contact Image */
