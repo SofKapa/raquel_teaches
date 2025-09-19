@@ -720,7 +720,9 @@ p.price {
 
 /* Old price with strikethrough */
 .old-price {
-  text-decoration: line-through 2px solid var(--rt-yellow);
+  text-decoration-line: line-through;
+  text-decoration-color: var(--rt-yellow);
+  text-decoration-thickness: 2px;
   color: var(--rt-dark);
   font-size: 1.2rem;
   margin-right: 0.3em;
