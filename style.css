@@ -719,7 +719,7 @@ p.price {
 
 
 /* Old price with strikethrough */
-.old-price {
+/* .old-price {
   text-decoration-line: line-through;
   text-decoration-color: var(--rt-yellow);
   text-decoration-thickness: 2px;
@@ -727,6 +727,26 @@ p.price {
   font-size: 1.2rem;
   margin-right: 0.3em;
   opacity: 0.8;
+} */
+
+.old-price {
+  position: relative;
+  display: inline-block; /* needed so ::after positions correctly */
+  color: var(--rt-dark);
+  font-size: 1.2rem;
+  margin-right: 0.3em;
+  opacity: 0.8;
+}
+
+.old-price::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%; /* centers the line */
+  height: 2px;
+  background-color: var(--rt-yellow);
+  transform: translateY(-50%);
 }
 
 /* Highlight the savings text */
