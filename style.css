@@ -609,6 +609,17 @@ h2.subtitle {
   padding-bottom:2rem;
 }
 
+.price-footnote {
+  color: var(--rt-yellow);
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 300;
+  padding:1rem;
+  padding-top: 2rem;
+  padding-bottom:0;
+}
+
 .package-note-bottom {
   color: var(--rt-yellow);
   text-align: center;
@@ -616,6 +627,7 @@ h2.subtitle {
   font-size: 1.2rem;
   font-weight: 500;
   padding:3rem;
+  padding-top: 1rem;
   padding-bottom:0;
 }
 
