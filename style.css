@@ -36,7 +36,7 @@ p {
   margin-bottom: 1em; }
 
 a { 
-  color: var(--rt-); 
+  color: var(--rt-light); 
   text-decoration: none; 
 }
 
@@ -497,7 +497,7 @@ p.service-note {
 /* Testimonial wrapper */
 .testimonial-wrapper {
   position: relative; /* right quote positions relative to this */
-  display: block;     makes container full width
+display: block;       /* makes container full width */
 }
 
 /* Right quote - top right of testimonial text */
