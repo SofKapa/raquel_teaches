@@ -1,0 +1,59 @@
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>
+    We use analytics cookies (Google Analytics) to understand how this site is used.
+    They are only switched on if you accept.
+    <a href="{{ '/privacy/' | relative_url }}">Privacy policy</a>
+  </p>
+  <button type="button" id="cc-reject">Reject</button>
+  <button type="button" id="cc-accept">Accept</button>
+</div>
+
+<script>
+(function () {
+  var KEY = 'cookie-consent', VERSION = 1;
+  var banner = document.getElementById('cookie-banner');
+
+  function getConsent() {
+    try {
+      var c = JSON.parse(localStorage.getItem(KEY));
+      return c && c.v === VERSION ? c : null;
+    } catch (e) { return null; }
+  }
+  function saveConsent(analytics) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        v: VERSION, analytics: analytics, ts: new Date().toISOString()
+      }));
+    } catch (e) {}
+  }
+  function deleteGACookies() {
+    var host = location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name === '_ga' || name.indexOf('_ga_') === 0) {
+        var exp = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        document.cookie = name + exp;
+        document.cookie = name + exp + '; domain=.' + host;
+      }
+    });
+  }
+
+  var current = getConsent();
+  if (current && current.analytics) loadGA();
+  if (!current) banner.hidden = false;
+
+  document.getElementById('cc-accept').addEventListener('click', function () {
+    saveConsent(true); banner.hidden = true; loadGA();
+  });
+  document.getElementById('cc-reject').addEventListener('click', function () {
+    var hadAnalytics = getConsent() && getConsent().analytics;
+    saveConsent(false); banner.hidden = true; deleteGACookies();
+    if (hadAnalytics) location.reload(); // stops GA already running on this page
+  });
+
+  var settings = document.getElementById('cookie-settings');
+  if (settings) settings.addEventListener('click', function (e) {
+    e.preventDefault(); banner.hidden = false;
+  });
+})();
+</script>
