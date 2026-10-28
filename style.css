@@ -1084,6 +1084,94 @@ nav.footer-links {
 
 
 
+/* ======================================================================================================================================
+   PRIVACY POLICY PAGE
+====================================================================================================================================== */
+
+.privacy {
+  background: var(--rt-light);
+  padding: 11rem 1.5rem 5rem; /* top padding clears the fixed glass header */
+  border-bottom: 2px solid var(--rt-light);
+}
+
+.privacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy h1 {
+  font-size: 2.2rem;
+  color: var(--rt-dark);
+  margin-bottom: 0.25em;
+}
+
+.privacy h2 {
+  font-size: 1.5rem;
+  color: var(--rt-maroon);
+  margin-top: 2em;
+}
+
+.privacy h3 {
+  font-size: 1.15rem;
+  color: var(--rt-dark);
+  margin: 1.5em 0 0.5em;
+}
+
+.privacy p,
+.privacy li {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--rt-dark);
+}
+
+.privacy ul {
+  list-style: disc;
+  margin: 0 0 1em 1.5rem; /* restores the indent your global reset removes */
+}
+
+.privacy li {
+  margin-bottom: 0.5em;
+}
+
+.privacy a {
+  color: var(--rt-maroon);
+  text-decoration: underline;
+}
+
+.privacy a:hover {
+  color: var(--rt-pink);
+}
+
+.privacy code {
+  background: rgba(61, 64, 91, 0.08);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+.privacy-updated {
+  font-style: italic;
+  color: var(--rt-maroon);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1380,6 +1468,11 @@ MOBILE PHONES
   .footer-links img {
       width: 40px;
       height: 40px;
+  }
+
+
+  .privacy {
+    padding: 9rem 1.5rem 4rem;
   }
 
 
